@@ -117,8 +117,41 @@ class AdminCtrl extends Controller
 
     }
 
-   
+//    data nilai
 
+function nilai(){
+    $data=Nilai::orderBy('id','desc')->get();
+    return view('admin.nilai_data',[
+        'data' =>$data
+    ]);
+}
+
+function nilai_add(){
+   return view('admin.nilai_add');
+}
+
+
+function nilai_act(Request $request){
+
+
+}
+
+function nilai_edit($id){
+    $data=Nilai::where('id',$id)->get();
+    return view('admin.nilai_edit',[
+        'data' =>$data
+    ]);
+}
+
+function nilai_update(Request $request){
+    
+}
+
+function nilai_delete($id){
+    Nilai::where('id',$id)->delete();
+    return redirect('/dashboard/nilai/data')->with('alert-success','data telah berhasil ditambahkan');
+
+}
 
 function cetak_kwitansi($id){
     $dt=Rekam::where('id',$id)->first();
