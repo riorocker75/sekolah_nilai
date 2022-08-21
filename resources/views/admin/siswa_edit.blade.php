@@ -59,6 +59,12 @@
                                 <label for="exampleInputEmail1">Nama</label>
                                 <input type="text" class="form-control" name="nama" value="{{$dt->nama}}" required>
                             </div>
+
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Nama orang tua</label>
+                              <input type="text" class="form-control" name="ortu" value="{{$dt->ortu}}" required>
+                          </div>
+
                              <div class="form-group">
                                 <label for="exampleInputEmail1">Jenis Kelamin</label>
                                  <select class="custom-select form-control-border border-width-2"  name="kelamin" required="required">

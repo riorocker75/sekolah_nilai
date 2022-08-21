@@ -13,8 +13,8 @@ class TblNilai extends Migration
      */
     public function up()
     {
-        if(!Schema::hasTable('siswa')) {
-            Schema::create('siswa', function (Blueprint $table) {
+        if(!Schema::hasTable('nilai')) {
+            Schema::create('nilai', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->text('siswa_id')->nullable();
                 $table->text('agama_raport')->nullable();
@@ -75,7 +75,7 @@ class TblNilai extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('siswa');
+        Schema::dropIfExists('nilai');
 
     }
 }

@@ -71,6 +71,8 @@ class AdminCtrl extends Controller
      DB::table('siswa')->insert([
         'nama' => $request->nama,
         'nis' =>$request->nis,
+        'ortu' =>$request->ortu,
+
         'jenis_kelamin' => $request->kelamin,
         'tgl_lhr' => $request->tgl_lhr,
         'tmp_lhr' => $request->tmp_lhr,
@@ -144,7 +146,7 @@ function nilai_edit($id){
 }
 
 function nilai_update(Request $request){
-    
+
 }
 
 function nilai_delete($id){

@@ -19,6 +19,8 @@ class TblSiswa extends Migration
                 $table->text('nama');
                 $table->text('jenis_kelamin')->nullable();
                 $table->text('nis')->nullable();
+                $table->text('ortu')->nullable();
+
                 $table->text('tmp_lhr')->nullable();
                 $table->dateTime('tgl_lhr')->nullable();
                 $table->text('nisn')->nullable();
