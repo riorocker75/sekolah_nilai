@@ -35,7 +35,7 @@ Route::get('/logout', [LoginCtrl::class,'logout']);
 
 
 
-// data pegawai
+// data siswa
 Route::get('/dashboard/siswa/data', [AdminCtrl::class,'siswa']);
 Route::get('/dashboard/siswa/add', [AdminCtrl::class,'siswa_add']);
 Route::post('/dashboard/siswa/act', [AdminCtrl::class,'siswa_act']);
@@ -43,6 +43,15 @@ Route::post('/dashboard/siswa/act', [AdminCtrl::class,'siswa_act']);
 Route::get('/dashboard/siswa/edit/{id}', [AdminCtrl::class,'siswa_edit']);
 Route::post('/dashboard/siswa/update', [AdminCtrl::class,'siswa_update']);
 Route::get('/dashboard/siswa/delete/{id}', [AdminCtrl::class,'siswa_delete']);
+
+// data nilai
+Route::get('/dashboard/nilai/data', [AdminCtrl::class,'nilai']);
+Route::get('/dashboard/nilai/add', [AdminCtrl::class,'nilai_add']);
+Route::post('/dashboard/nilai/act', [AdminCtrl::class,'nilai_act']);
+
+Route::get('/dashboard/nilai/edit/{id}', [AdminCtrl::class,'nilai_edit']);
+Route::post('/dashboard/nilai/update', [AdminCtrl::class,'nilai_update']);
+Route::get('/dashboard/nilai/delete/{id}', [AdminCtrl::class,'nilai_delete']);
 
 
 
