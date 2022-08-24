@@ -6,12 +6,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Dokter</h1>
+            <h1 class="m-0">Data Siswa</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Data Dokter</li>
+              <li class="breadcrumb-item active">Data Siswa</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,8 +26,8 @@
       <div class="container-fluid">
          <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data semua Dokter</h3>
-                <a href="{{url('/kapus/cetak/dokter')}}" class="btn btn-default float-right"><i class="fa fa-print" aria-hidden="true"></i> Cetak</a>
+                <h3 class="card-title">Data semua Siswa</h3>
+                {{-- <a href="{{url('/dashboard/siswa/add')}}" class="btn btn-primary float-right">Tambah data</a> --}}
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -35,27 +35,41 @@
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>NIP</th>
                     <th>Nama</th>
-                    <th>Telepon</th>
-                    <th>Alamat</th>
-                    <th>Poli</th>
+                    <th>Nis</th>
+                    <th>Nisn</th>
+                    <th>Nomor USBN</th>
+                    <th>Angkatan</th>
+                    <th>Nilai Rerata</th>
+
+
+                    {{-- <th>Edit</th> --}}
                   </tr>
                   </thead>
                   <tbody>
                       <?php $no=1; ?>
                       @foreach ($data as $dt)
-                      @php
-                          $poli=App\Models\Poli::where('id',$dt->poli)->first()
-                      @endphp
+                        @php
+                            $nilai=App\Models\Nilai::where('siswa_id',$dt->id)->first();
+                        @endphp
                            <tr>
                                 <td>{{$no++}}</td>
-                                <td>{{$dt->nip}}</td>
-                                <td>{{$dt->nama}} </td>
-                                <td>{{$dt->telepon}} </td>
-                                <td>{{$dt->alamat}}</td>
-                                <td>{{$poli->prosedur}}</td>
+                                <td>{{$dt->nama}}</td>
 
+                                <td>{{$dt->nis}}</td>
+                                <td>{{$dt->nisn}} </td>
+                                <td>{{$dt->no_un}} </td>
+                                <td>{{$dt->angkatan}} </td>
+                                <td>
+                                  Nilai Raport: {{$nilai->rata_raport}} <br>
+                                  Nilai US: {{$nilai->rata_us}} <br>
+                                </td>
+
+
+                                {{-- <td>
+                                    <a href="{{url('/dashboard/siswa/edit/'.$dt->id.'')}}" class="btn btn-warning">Ubah</a>
+                                <a href="{{url('/dashboard/siswa/delete/'.$dt->id.'')}}" class="btn btn-danger">Hapus</a>
+                                </td> --}}
                             </tr>
                       @endforeach
                  

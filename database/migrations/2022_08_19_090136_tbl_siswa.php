@@ -25,6 +25,7 @@ class TblSiswa extends Migration
                 $table->dateTime('tgl_lhr')->nullable();
                 $table->text('nisn')->nullable();
                 $table->text('no_un')->nullable();
+                $table->text('angkatan')->nullable();
                 $table->dateTime('tanggal')->nullable();
                 $table->text('status')->nullable();
         

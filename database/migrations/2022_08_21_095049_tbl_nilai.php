@@ -58,8 +58,6 @@ class TblNilai extends Migration
 
                 $table->text('rata_raport')->nullable();
                 $table->text('rata_us')->nullable();
-                
-
 
                 $table->dateTime('tanggal')->nullable();
                 $table->text('status')->nullable();

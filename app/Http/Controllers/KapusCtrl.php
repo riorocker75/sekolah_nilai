@@ -11,17 +11,15 @@ use Illuminate\Support\Str;
 
 use Illuminate\Support\Facades\Hash;
 
-use App\Models\Pasien;
-use App\Models\Rekam;
-use App\Models\Rujukan;
-use App\Models\RekamMedis;
 
-use App\Models\Kwitansi;
-use App\Models\Pegawai;
-use App\Models\Poli;
 use App\Models\User;
+use App\Models\Siswa;
+use App\Models\Nilai;
+use App\Models\Transaksi;
+
+
+
 use App\Models\Admin;
-use App\Models\Dokter;
 
 class KapusCtrl extends Controller
 {
@@ -39,90 +37,23 @@ class KapusCtrl extends Controller
     function index(){
         return view('kepala.kepala');
     }
-    function pasien(){
-        $data=Pasien::orderBy('id','asc')->get();
-        return view('kepala.pasien',[
-            'data' =>$data
-        ]);
-    }
-    function cetak_pasien(){
-        $year=date('Y');
-          $data=Pasien::whereYear('tgl_registrasi',$year)->orderBy('id','asc')->get();
-            return view('cetak.cetak_pasien',[
-                'data' =>$data
-            ]);
-    }
 
-
-
-      function pegawai(){
-            $data=Pegawai::orderBy('id','asc')->get();
-            return view('kepala.pegawai',[
-                'data' =>$data
-            ]);
-        }
-        function cetak_pegawai(){
-             $year=date('Y');
-          $data=Pegawai::whereYear('tanggal',$year)->orderBy('id','asc')->get();
-            return view('cetak.cetak_pegawai',[
-                'data' =>$data
-            ]);
-        }
-
-
-         function dokter(){
-            $data=Dokter::orderBy('id','asc')->get();
-            return view('kepala.dokter',[
-                'data' =>$data
-            ]);
-        }
-
-        function cetak_dokter(){
-              $year=date('Y');
-          $data=Dokter::whereYear('tanggal',$year)->orderBy('id','asc')->get();
-            return view('cetak.cetak_dokter',[
-                'data' =>$data
-            ]);
-        }
-
-
-      function poli(){
-        $data=Poli::orderBy('id','asc')->get();
-        return view('kepala.poli',[
+    function siswa(){
+        $data=Siswa::orderBy('id','desc')->get();
+        return view('kepala.siswa_data',[
             'data' =>$data
         ]);
     }
 
-      function rujukan(){
-        $data=Rekam::orderBy('id','asc')->where('status_rujuk','1')->get();
-            return view('kepala.rujukan',[
-                'data' =>$data
-            ]);
-        }
-        function cetak_rujukan(){
-            $year=date('Y');
-                $data=Rekam::whereYear('tanggal',$year)->get();
-                return view('cetak.cetak_rujukan',[
-                    'data'=> $data
-                ]);
-
-        }
-
-        function kunjungan(){
-        $data=Rekam::orderBy('id','asc')->get();
-        return view('kepala.kunjungan',[
+    function nilai(){
+        $data=Nilai::orderBy('id','desc')->get();
+        return view('kepala.nilai_data',[
             'data' =>$data
         ]);
     }
-        function cetak_kunjungan(){
-            $year=date('Y');
-             $data=Rekam::whereYear('tanggal',$year)->get();
-            return view('cetak.cetak_kunjungan',[
-                'data'=> $data
-            ]);
-        } 
 
 
+      
     function pengaturan(){
         $username= Session::get('kp_username');
         $data= Admin::where('username',$username)->first();
@@ -135,12 +66,12 @@ class KapusCtrl extends Controller
      function pengaturan_update(Request $request){
    
         if($request->password == ""){
-            return redirect('/dashboard/kapus')->with('alert-success','Tidak Ada perubahan');
+            return redirect('/dashboard/kepsek')->with('alert-success','Tidak Ada perubahan');
         }else{
             Admin::where('level','2')->update([
                 'password' =>bcrypt($request->password)
             ]);
-            return redirect('/kapus/pengaturan/data')->with('alert-success','Password telah berubah');
+            return redirect('/kepsek/pengaturan/data')->with('alert-success','Password telah berubah');
 
         }
 

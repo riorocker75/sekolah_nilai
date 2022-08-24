@@ -14,6 +14,9 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="{{url('/dashboard/nilai/data')}}" class="nav-link">Data Nilai</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{url('/dashboard/ambil/data')}}" class="nav-link">Data Ambil Ijazah</a>
+      </li>
       
     </ul>
 

@@ -53,93 +53,30 @@ Route::get('/dashboard/nilai/edit/{id}', [AdminCtrl::class,'nilai_edit']);
 Route::post('/dashboard/nilai/update', [AdminCtrl::class,'nilai_update']);
 Route::get('/dashboard/nilai/delete/{id}', [AdminCtrl::class,'nilai_delete']);
 
+// data ambil
 
+Route::get('/dashboard/ambil/data', [AdminCtrl::class,'ambil']);
+Route::get('/dashboard/ambil/add', [AdminCtrl::class,'ambil_add']);
+Route::post('/dashboard/ambil/act', [AdminCtrl::class,'ambil_act']);
 
-// data dokter
-Route::get('/dashboard/dokter/data', [AdminCtrl::class,'dokter']);
-Route::get('/dashboard/dokter/add', [AdminCtrl::class,'dokter_add']);
-Route::post('/dashboard/dokter/act', [AdminCtrl::class,'dokter_act']);
-
-Route::get('/dashboard/dokter/edit/{id}', [AdminCtrl::class,'dokter_edit']);
-Route::post('/dashboard/dokter/update', [AdminCtrl::class,'dokter_update']);
-Route::get('/dashboard/dokter/delete/{id}', [AdminCtrl::class,'dokter_delete']);
-
-
-// Data poli
-Route::get('/dashboard/poli/data', [AdminCtrl::class,'poli']);
-Route::post('/dashboard/poli/act', [AdminCtrl::class,'poli_act']);
-Route::get('/dashboard/poli/edit/{id}', [AdminCtrl::class,'poli_edit']);
-Route::post('/dashboard/poli/update', [AdminCtrl::class,'poli_update']);
-Route::get('/dashboard/poli/delete/{id}', [AdminCtrl::class,'poli_delete']);
-
-
-// data rekam medis
-Route::get('/dashboard/rekam/data', [AdminCtrl::class,'rekam']);
-Route::get('/dashboard/rekam/add', [AdminCtrl::class,'rekam_add']);
-Route::post('/dashboard/rekam/act', [AdminCtrl::class,'rekam_act']);
-Route::get('/dashboard/rekam/edit/{id}', [AdminCtrl::class,'rekam_edit']);
-Route::post('/dashboard/rekam/update', [AdminCtrl::class,'rekam_update']);
-Route::get('/dashboard/rekam/delete/{id}', [AdminCtrl::class,'rekam_delete']);
-
-
-//data rujukan
-Route::get('/dashboard/rujukan/data', [AdminCtrl::class,'rujukan']);
-Route::get('/dashboard/cetak/rujukan', [AdminCtrl::class,'cetak_rujukan_data']);
-
-
-// kunjungan pasien
-Route::get('/dashboard/kunjungan/data', [AdminCtrl::class,'kunjungan']);
-Route::get('/dashboard/cetak/kunjungan', [AdminCtrl::class,'cetak_kunjungan']);
-
-
-
-// cetak rekam kwitansi
-Route::get('/dashboard/rekam/kwitansi/{id}', [AdminCtrl::class,'cetak_kwitansi']);
-
-// cetak surat rujuk
-Route::get('/dashboard/rekam/surat/{id}', [AdminCtrl::class,'cetak_rujukan']);
+Route::get('/dashboard/ambil/edit/{id}', [AdminCtrl::class,'ambil_edit']);
+Route::post('/dashboard/ambil/update', [AdminCtrl::class,'ambil_update']);
+Route::get('/dashboard/ambil/delete/{id}', [AdminCtrl::class,'ambil_delete']);
 
 
 // cek rujukan ajax
 Route::post('/ajax/cek_rujuk', [AdminCtrl::class,'cek_rujuk']);
 
 
-// bagian kapus
-// cetak pasien
-Route::get('/dashboard/kapus', [KapusCtrl::class,'index']);
-Route::get('/kapus/pasien', [KapusCtrl::class,'pasien']);
-Route::get('/kapus/cetak/pasien', [KapusCtrl::class,'cetak_pasien']);
-
-// pegwai
-Route::get('/kapus/pegawai', [KapusCtrl::class,'pegawai']);
-Route::get('/kapus/cetak/pegawai', [KapusCtrl::class,'cetak_pegawai']);
-
-// Dokter
-Route::get('/kapus/dokter', [KapusCtrl::class,'dokter']);
-Route::get('/kapus/cetak/dokter', [KapusCtrl::class,'cetak_dokter']);
-
-// kunjungan pasien
-Route::get('/kapus/kunjungan', [KapusCtrl::class,'kunjungan']);
-Route::get('/kapus/cetak/kunjungan', [KapusCtrl::class,'cetak_kunjungan']);
-
-
-// poli
-Route::get('/kapus/poli', [KapusCtrl::class,'poli']);
-
-// rujukan
-Route::get('/kapus/rujukan', [KapusCtrl::class,'rujukan']);
-Route::get('/kapus/cetak/rujukan', [KapusCtrl::class,'cetak_rujukan']);
-
-// profile
-Route::get('/dashboard/profile', [AdminCtrl::class,'profile']);
-Route::get('/dashboard/pelayanan', [AdminCtrl::class,'pelayanan']);
-Route::get('/dashboard/visi-misi', [AdminCtrl::class,'visimisi']);
-
-Route::get('/dashboard/struktur', [AdminCtrl::class,'struktur']);
-Route::get('/dashboard/galeri', [AdminCtrl::class,'galeri']);
+// bagian kepsek
+Route::get('/dashboard/kepsek', [KapusCtrl::class,'index']);
+Route::get('/dashboard/kepsek/siswa/data', [KapusCtrl::class,'siswa']);
+Route::get('/dashboard/kepsek/nilai/data', [KapusCtrl::class,'nilai']);
 
 
 
+
+//
 
 // role 
 Route::get('/dashboard/role/data', [AdminCtrl::class,'role']);
@@ -154,8 +91,7 @@ Route::get('/dashboard/pengaturan/data', [AdminCtrl::class,'pengaturan']);
 Route::post('/dashboard/pengaturan/update', [AdminCtrl::class,'pengaturan_update']);
 
 
-Route::get('/kapus/pengaturan/data', [KapusCtrl::class,'pengaturan']);
-Route::post('/kapus/pengaturan/update', [KapusCtrl::class,'pengaturan_update']);
+Route::get('/kepsek/pengaturan/data', [KapusCtrl::class,'pengaturan']);
+Route::post('/kepsek/pengaturan/update', [KapusCtrl::class,'pengaturan_update']);
 
 
-// bagian dokter

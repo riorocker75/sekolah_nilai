@@ -51,6 +51,11 @@
                                 <input type="text" class="form-control" name="no_un" required>
                             </div>
 
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Angkatan</label>
+                              <input type="number" min="2000" max="2099" class="form-control" name="angkatan" required>
+                            </div>
+
                              <div class="form-group">
                                 <label for="exampleInputEmail1">Nama</label>
                                 <input type="text" class="form-control" name="nama" required>

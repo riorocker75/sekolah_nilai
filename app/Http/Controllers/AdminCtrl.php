@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 use Illuminate\Support\Facades\Hash;
 
-
+use File;
 use App\Models\User;
 use App\Models\Admin;
 use App\Models\Siswa;
@@ -74,6 +74,8 @@ class AdminCtrl extends Controller
         'ortu' =>$request->ortu,
 
         'jenis_kelamin' => $request->kelamin,
+        'angkatan' => $request->angkatan,
+
         'tgl_lhr' => $request->tgl_lhr,
         'tmp_lhr' => $request->tmp_lhr,
         'nisn' =>$request->nisn,
@@ -103,6 +105,7 @@ class AdminCtrl extends Controller
             'nama' => $request->nama,
             'nis' =>$request->nis,
             'jenis_kelamin' => $request->kelamin,
+            'angkatan' => $request->angkatan,
             'tgl_lhr' => $request->tgl_lhr,
             'tmp_lhr' => $request->tmp_lhr,
             'nisn' =>$request->nisn,
@@ -134,6 +137,53 @@ function nilai_add(){
 
 
 function nilai_act(Request $request){
+    $request->validate([
+        'siswa' => 'required'
+    ]);
+
+     $date=date('Y-m-d');
+
+ DB::table('nilai')->insert([
+    'siswa_id' => $request->siswa,
+    'agama_raport' => $request->agama_raport,
+    'agama_us' => $request->agama_us,
+
+    'pkn_raport' => $request->pkn_raport,
+    'pkn_us' => $request->pkn_us,
+
+    'indo_raport' => $request->indo_raport,
+    'indo_us' => $request->indo_us,
+
+    'ing_raport' => $request->ing_raport,
+    'ing_us' => $request->ing_us,
+    'mm_raport' => $request->mm_raport,
+    'mm_us' => $request->mm_us,
+    'fisika_raport' => $request->fisika_raport,
+    'fisika_us' => $request->fisika_us,
+    'kimia_raport' => $request->kimia_raport,
+    'kimia_us' => $request->kimia_us,
+    'biologi_raport' => $request->biologi_raport,
+    'biologi_us' => $request->biologi_us,
+    'sejarah_raport' => $request->sejarah_raport,
+    'sejarah_us' => $request->sejarah_us,
+    'sbk_raport' => $request->sbk_raport,
+    'sbk_us' => $request->sbk_us,
+    'penjas_raport' => $request->penjas_raport,
+    'penjas_us' => $request->penjas_us,
+    'tik_raport' => $request->tik_raport,
+    'tik_us' => $request->tik_us,
+    'keting_raport' => $request->keting_raport,
+    'keting_us' => $request->keting_us,
+    'mulok1_raport' => $request->mulok1_raport,
+    'mulok1_us' => $request->mulok1_us,
+    'mulok2_raport' => $request->mulok2_raport,
+    'mulok2_us' => $request->mulok2_us,
+    'rata_raport' => $request->rata_raport,
+    'rata_us' => $request->rata_us,
+    'tanggal' =>$date,
+    'status' => 1
+]);
+return redirect('/dashboard/nilai/data')->with('alert-success','Data Berhasil disimpan');
 
 
 }
@@ -146,6 +196,47 @@ function nilai_edit($id){
 }
 
 function nilai_update(Request $request){
+    $request->validate([
+        'id' => 'required'
+    ]);
+    $id=$request->id;
+     $date=date('Y-m-d');
+
+ DB::table('nilai')->where('id',$id)->update([
+    'agama_raport' => $request->agama_raport,
+    'agama_us' => $request->agama_us,
+    'pkn_raport' => $request->pkn_raport,
+    'pkn_us' => $request->pkn_us,
+    'indo_raport' => $request->indo_raport,
+    'indo_us' => $request->indo_us,
+    'ing_raport' => $request->ing_raport,
+    'ing_us' => $request->ing_us,
+    'mm_raport' => $request->mm_raport,
+    'mm_us' => $request->mm_us,
+    'fisika_raport' => $request->fisika_raport,
+    'fisika_us' => $request->fisika_us,
+    'kimia_raport' => $request->kimia_raport,
+    'kimia_us' => $request->kimia_us,
+    'biologi_raport' => $request->biologi_raport,
+    'biologi_us' => $request->biologi_us,
+    'sejarah_raport' => $request->sejarah_raport,
+    'sejarah_us' => $request->sejarah_us,
+    'sbk_raport' => $request->sbk_raport,
+    'sbk_us' => $request->sbk_us,
+    'penjas_raport' => $request->penjas_raport,
+    'penjas_us' => $request->penjas_us,
+    'tik_raport' => $request->tik_raport,
+    'tik_us' => $request->tik_us,
+    'keting_raport' => $request->keting_raport,
+    'keting_us' => $request->keting_us,
+    'mulok1_raport' => $request->mulok1_raport,
+    'mulok1_us' => $request->mulok1_us,
+    'mulok2_raport' => $request->mulok2_raport,
+    'mulok2_us' => $request->mulok2_us,
+    'rata_raport' => $request->rata_raport,
+    'rata_us' => $request->rata_us,
+]);
+return redirect('/dashboard/nilai/data')->with('alert-success','Data Berhasil update');
 
 }
 
@@ -155,20 +246,79 @@ function nilai_delete($id){
 
 }
 
-function cetak_kwitansi($id){
-    $dt=Rekam::where('id',$id)->first();
-    return view('cetak.kwitansi',[
-        'dt'=> $dt
-    ]);
-}
 
-function cetak_rujukan($id){
-    $dt=Rujukan::where('id_rekam',$id)->first();
+    function ambil(){
+        $data= Transaksi::orederBy('id','desc')->get();
+        return view('admin.ambil_data',[
+            'data' =>$data
+        ]);
+    }
 
-    return view('cetak.surat_rujuk',[
-        'dt'=> $dt
-    ]);
-}
+    function ambil_add(){
+        return view('admin.ambil_add');
+    }
+
+    function ambil_act(Request $request){
+        $this->validate($request, [
+			'bukti' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+        ]);
+
+        $kode_by= "TRFP-".rand(1000,9999);
+        $bukti_bayar =$request->file('bukti');
+        $nf_bukti_bayar = rand(10000,99999)."_".rand(1000,9999).".".$bukti_bayar->getClientOriginalExtension();
+        $tujuan_upload = 'upload';
+
+        $bukti_bayar->move($tujuan_upload,$nf_bukti_bayar);
+
+        Transaksi::insert([
+            'siswa_id' =>$request->siswa,
+            'bukti' =>$nf_bukti_bayar,
+            'tanggal'=> data('Y-m-d'),
+            'status' => 1 
+        ]);
+
+        return redirect('/dashboard/ambil/data')->with('alert-success','data telah berhasil ditambahkan');
+
+
+    }
+
+    function ambil_edit($id){
+        $data = Transaksi::where('id',$id)->get();
+        return view('admin.ambil_edit',[
+            'data' =>$data
+        ]);
+    }
+
+    function ambil_update(Request $request){
+        function ambil_act(Request $request){
+            $this->validate($request, [
+                'bukti' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+            ]);
+    
+            $kode_by= "TRFP-".rand(1000,9999);
+            $bukti_bayar =$request->file('bukti');
+            $nf_bukti_bayar = rand(10000,99999)."_".rand(1000,9999).".".$bukti_bayar->getClientOriginalExtension();
+            $tujuan_upload = 'upload';
+    
+            $bukti_bayar->move($tujuan_upload,$nf_bukti_bayar);
+            $id=$request->id;
+            Transaksi::where('id',$id)->update([
+                'siswa_id' =>$request->siswa,
+                'bukti' =>$nf_bukti_bayar,
+            ]);
+    
+            return redirect('/dashboard/ambil/data')->with('alert-success','data telah berhasil ditambahkan');
+    
+        }
+    }
+
+    function ambil_delete($id){
+        $bukti=Transaksi::where('id',$id)->first();
+        File::delete('upload'.$bukti->bukti);
+        Transaksi::where('id',$id)->delete();
+    }
+
+
 
 
  function role(){
