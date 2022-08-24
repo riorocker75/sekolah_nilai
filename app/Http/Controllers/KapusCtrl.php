@@ -68,10 +68,12 @@ class KapusCtrl extends Controller
         ]);
     }
 
-    function cetak_ijazah(){
-        $data=Nilai::orderBy('rata_raport','asc')->get();
+    function cetak_ijazah($id){
+        $dt=Nilai::where('id',$id)->first();
+        $siswa=Siswa::where('id',$dt->siswa_id)->first();
         return view('cetak.cetak_ijazah',[
-            'data' =>$data
+            'dt' =>$dt,
+            'siswa' =>$siswa
         ]);
     }
 

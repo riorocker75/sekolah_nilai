@@ -95,8 +95,8 @@
 }
 	</style>
 </head>
-{{-- <body onload="window.print();"> --}}
-    <body>
+<body onload="window.print();">
+    {{-- <body> --}}
 	<div class="wrapper">
 		<div class="container">
         <div style="position:relative;left:340px;width:300px;margin-top:40px;margin-bottom:80px">
