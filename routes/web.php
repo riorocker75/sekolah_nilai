@@ -72,6 +72,7 @@ Route::post('/ajax/cek_rujuk', [AdminCtrl::class,'cek_rujuk']);
 Route::get('/dashboard/kepsek', [KapusCtrl::class,'index']);
 Route::get('/dashboard/kepsek/siswa/data', [KapusCtrl::class,'siswa']);
 Route::get('/dashboard/kepsek/nilai/data', [KapusCtrl::class,'nilai']);
+Route::get('/dashboard/kepsek/nilai/cetak', [KapusCtrl::class,'cetak_nilai']);
 
 
 

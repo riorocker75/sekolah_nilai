@@ -52,6 +52,13 @@ class KapusCtrl extends Controller
         ]);
     }
 
+    function cetak_nilai(){
+        $data=Nilai::orderBy('rata_raport','asc')->get();
+        return view('cetak.cetak_nilai',[
+            'data' =>$data
+        ]);
+    }
+
 
       
     function pengaturan(){

@@ -181,20 +181,20 @@ function status_tarik($status){
 
 function preview_file($nama_file){ /*ini menggunakanan paramerter $nama_file*/
     $url_sh=substr($nama_file,0,-4);
-    $url_klik= url('upload/syarat/'.$nama_file);
+    $url_klik= url('upload/'.$nama_file);
     // ini link dari route
     $url_pdf=url('review/syarat/'.$url_sh);
     
     $link_image="window.open('".$url_klik."','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;";
     $link_pdf="window.open('".$url_pdf."','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;";
 
-    $file_path = pathinfo(storage_path().'/upload/syarat/'.$nama_file);
+    $file_path = pathinfo(storage_path().'/upload/'.$nama_file);
     switch(strtolower($file_path['extension'])){
         case"jpg":case"png":case"jpeg":
             echo '
             <a href="" onclick="'.$link_image.'">';
-            echo "<img src='$url_klik' style='width:100px; height:100px'><br/>";
-            echo "Klik Untuk Lebih Detail";
+            echo "<img src='$url_klik' style='width:50px; height:50px'><br/>";
+            echo "klik untuk detail";
             echo "</a>";
         break;
         case"pdf":

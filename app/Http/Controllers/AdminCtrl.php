@@ -248,7 +248,7 @@ function nilai_delete($id){
 
 
     function ambil(){
-        $data= Transaksi::orederBy('id','desc')->get();
+        $data= Transaksi::orderBy('id','desc')->get();
         return view('admin.ambil_data',[
             'data' =>$data
         ]);
@@ -273,7 +273,7 @@ function nilai_delete($id){
         Transaksi::insert([
             'siswa_id' =>$request->siswa,
             'bukti' =>$nf_bukti_bayar,
-            'tanggal'=> data('Y-m-d'),
+            'tanggal'=> date('Y-m-d'),
             'status' => 1 
         ]);
 
@@ -290,7 +290,6 @@ function nilai_delete($id){
     }
 
     function ambil_update(Request $request){
-        function ambil_act(Request $request){
             $this->validate($request, [
                 'bukti' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
             ]);
@@ -303,19 +302,19 @@ function nilai_delete($id){
             $bukti_bayar->move($tujuan_upload,$nf_bukti_bayar);
             $id=$request->id;
             Transaksi::where('id',$id)->update([
-                'siswa_id' =>$request->siswa,
                 'bukti' =>$nf_bukti_bayar,
             ]);
     
             return redirect('/dashboard/ambil/data')->with('alert-success','data telah berhasil ditambahkan');
     
-        }
     }
 
     function ambil_delete($id){
         $bukti=Transaksi::where('id',$id)->first();
         File::delete('upload'.$bukti->bukti);
         Transaksi::where('id',$id)->delete();
+        return redirect('/dashboard/ambil/data')->with('alert-success','data telah berhasil ditambahkan');
+
     }
 
 
