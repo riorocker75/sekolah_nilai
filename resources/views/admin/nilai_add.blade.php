@@ -48,7 +48,7 @@
                                             $cek_siswa=App\Models\Nilai::where('siswa_id',$sw->id)->count();
                                         @endphp
                                         @if ($cek_siswa < 1 )
-                                          <option value="{{$sw->id}}}">{{$sw->nama}} | Nis : {{$sw->nis}}</option>
+                                          <option value="{{$sw->id}}">{{$sw->nama}} | Nis : {{$sw->nis}}</option>
                                         @endif
                                         @endforeach
                                    

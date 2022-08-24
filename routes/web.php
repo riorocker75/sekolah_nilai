@@ -63,17 +63,15 @@ Route::get('/dashboard/ambil/edit/{id}', [AdminCtrl::class,'ambil_edit']);
 Route::post('/dashboard/ambil/update', [AdminCtrl::class,'ambil_update']);
 Route::get('/dashboard/ambil/delete/{id}', [AdminCtrl::class,'ambil_delete']);
 
-
-// cek rujukan ajax
-Route::post('/ajax/cek_rujuk', [AdminCtrl::class,'cek_rujuk']);
-
-
 // bagian kepsek
 Route::get('/dashboard/kepsek', [KapusCtrl::class,'index']);
 Route::get('/dashboard/kepsek/siswa/data', [KapusCtrl::class,'siswa']);
 Route::get('/dashboard/kepsek/nilai/data', [KapusCtrl::class,'nilai']);
 Route::get('/dashboard/kepsek/nilai/cetak', [KapusCtrl::class,'cetak_nilai']);
 
+
+Route::get('/dashboard/kepsek/nilai/cetak/daftar_nilai/{id}', [KapusCtrl::class,'cetak_daftar_nilai']);
+Route::get('/dashboard/kepsek/nilai/cetak/ijazah/{id}', [KapusCtrl::class,'cetak_ijazah']);
 
 
 

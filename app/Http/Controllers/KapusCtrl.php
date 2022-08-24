@@ -39,7 +39,7 @@ class KapusCtrl extends Controller
     }
 
     function siswa(){
-        $data=Siswa::orderBy('id','desc')->get();
+        $data=Nilai::orderBy('id','desc')->get();
         return view('kepala.siswa_data',[
             'data' =>$data
         ]);
@@ -58,6 +58,24 @@ class KapusCtrl extends Controller
             'data' =>$data
         ]);
     }
+
+    function cetak_daftar_nilai($id){
+        $dt=Nilai::where('id',$id)->first();
+        $siswa=Siswa::where('id',$dt->siswa_id)->first();
+        return view('cetak.cetak_dnilai',[
+            'dt' =>$dt,
+            'siswa' =>$siswa
+        ]);
+    }
+
+    function cetak_ijazah(){
+        $data=Nilai::orderBy('rata_raport','asc')->get();
+        return view('cetak.cetak_ijazah',[
+            'data' =>$data
+        ]);
+    }
+
+
 
 
       

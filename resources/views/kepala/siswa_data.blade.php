@@ -40,7 +40,8 @@
                     <th>Nisn</th>
                     <th>Nomor USBN</th>
                     <th>Angkatan</th>
-                    <th>Nilai Rerata</th>
+                    <th>Cetak Format</th>
+
 
 
                     {{-- <th>Edit</th> --}}
@@ -50,21 +51,22 @@
                       <?php $no=1; ?>
                       @foreach ($data as $dt)
                         @php
-                            $nilai=App\Models\Nilai::where('siswa_id',$dt->id)->first();
+                            $siswa=App\Models\Siswa::where('id',$dt->siswa_id)->first();
                         @endphp
                            <tr>
                                 <td>{{$no++}}</td>
-                                <td>{{$dt->nama}}</td>
+                                <td>{{$siswa->nama}}</td>
 
-                                <td>{{$dt->nis}}</td>
-                                <td>{{$dt->nisn}} </td>
-                                <td>{{$dt->no_un}} </td>
-                                <td>{{$dt->angkatan}} </td>
+                                <td>{{$siswa->nis}}</td>
+                                <td>{{$siswa->nisn}} </td>
+                                <td>{{$siswa->no_un}} </td>
+                                <td>{{$siswa->angkatan}} </td>
+                               
+
                                 <td>
-                                  Nilai Raport: {{$nilai->rata_raport}} <br>
-                                  Nilai US: {{$nilai->rata_us}} <br>
+                                    <a href="{{url('/dashboard/kepsek/nilai/cetak/daftar_nilai/'.$dt->id.'')}}" class="btn btn-default">Daftar Nilai</a>
+                                <a href="{{url('/dashboard/kepsek/nilai/cetak/ijazah/'.$dt->id.'')}}" class="btn btn-default">Ijazah</a>
                                 </td>
-
 
                                 {{-- <td>
                                     <a href="{{url('/dashboard/siswa/edit/'.$dt->id.'')}}" class="btn btn-warning">Ubah</a>
