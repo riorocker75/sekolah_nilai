@@ -99,7 +99,7 @@
     {{-- <body> --}}
 	<div class="wrapper">
 		<div class="container">
-        <div style="position:relative;left:340px;width:300px;margin-top:40px;margin-bottom:80px">
+        <div style="position:relative;left:340px;width:500px;margin-top:40px;margin-bottom:80px">
             <div style="margin-top:50px;margin-right:300px;">
                 <p style="text-transform:uppercase">{{$siswa->nama}}</p>
             </div>
