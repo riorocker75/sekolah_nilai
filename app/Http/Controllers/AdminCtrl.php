@@ -117,7 +117,16 @@ class AdminCtrl extends Controller
     }
 
     function siswa_delete($id){
+        $bukti=Transaksi::where('siswa_id',$id)->first();
+        File::delete('upload'.$bukti->bukti);
+        
+        Transaksi::where('siswa_id',$id)->delete();
+        Nilai::where('siswa_id',$id)->delete();
+
         Siswa::where('id',$id)->delete();
+
+       
+
         return redirect('/dashboard/siswa/data')->with('alert-success','Data Berhasil disimpan');
 
     }
