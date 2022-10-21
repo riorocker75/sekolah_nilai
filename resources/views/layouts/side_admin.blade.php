@@ -5,18 +5,7 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('/')}}" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('/dashboard/siswa/data')}}" class="nav-link">Data Siswa</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('/dashboard/nilai/data')}}" class="nav-link">Data Nilai</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('/dashboard/ambil/data')}}" class="nav-link">Data Ambil Ijazah</a>
-      </li>
+     
       
     </ul>
 
@@ -36,11 +25,11 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
          
           <div class="dropdown-divider"></div>
-          <a href="{{url('/logout')}}" class="dropdown-item">
+          <a  class="dropdown-item" data-toggle="modal" data-target="#logout">
             <i class="fas fa-lock mr-2"></i> Keluar
           </a>
+
          
-        </div>
       </li>
       
     </ul>

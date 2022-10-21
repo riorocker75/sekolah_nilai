@@ -28,8 +28,8 @@
 <div class="login-box">
   <div style="text-align:center;margin:30px 0">
 
-    {{-- <img src="{{url('/logo/pancabudi.png')}}" style="width:120px;height:120px" alt="" srcset="">&nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="{{url('/logo/logoAs.png')}}" style="width:120px;height:120px" alt="" srcset=""> --}}
+    {{-- <img src="{{url('/logo/pancabudi.png')}}" style="width:120px;height:120px" alt="" srcset="">&nbsp;&nbsp;&nbsp;&nbsp; --}}
+    <img src="{{url('/logo/logo_utama.png')}}" style="width:120px;height:120px" alt="" srcset="">
   </div>
 
  <div class="card card-outline card-primary">
