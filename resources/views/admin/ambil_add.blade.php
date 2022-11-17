@@ -30,7 +30,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form action="{{ url('/dashboard/ambil/act') }}" method="post" enctype='multipart/form-data'>
+                <form action="{{ url('/dashboard/ambil/act') }}" method="post" enctype="multipart/form-data">
                        @csrf  
                        @method('POST')
                 <div class="row">

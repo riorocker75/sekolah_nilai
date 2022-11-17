@@ -183,10 +183,10 @@ function preview_file($nama_file){ /*ini menggunakanan paramerter $nama_file*/
     $url_sh=substr($nama_file,0,-4);
     $url_klik= url('upload/'.$nama_file);
     // ini link dari route
-    $url_pdf=url('review/syarat/'.$url_sh);
+    $url_pdf=url('upload/'.$url_sh);
     
     $link_image="window.open('".$url_klik."','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;";
-    $link_pdf="window.open('".$url_pdf."','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;";
+    $link_pdf="window.open('".$url_pdf.".pdf','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;";
 
     $file_path = pathinfo(storage_path().'/upload/'.$nama_file);
     switch(strtolower($file_path['extension'])){
@@ -201,7 +201,7 @@ function preview_file($nama_file){ /*ini menggunakanan paramerter $nama_file*/
             echo '
             <a href="" onclick="'.$link_pdf.'">';
             
-            echo "<i class='fas fa-file-pdf' style='font-size:100px;color:#D81F28'></i><br/>";
+            echo "<i class='fas fa-file-pdf' style='font-size:50px;color:#D81F28'></i><br/>";
             echo "Klik Untuk Lebih Detail<br>";
             echo "Matikan IDM atau sejenisnya";
 

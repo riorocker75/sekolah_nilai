@@ -268,8 +268,8 @@ function nilai_delete($id){
     }
 
     function ambil_act(Request $request){
-        $this->validate($request, [
-			'bukti' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+        $request->validate([
+			'bukti' => 'required|mimes:jpeg,png,jpg,pdf|max:2048'
         ]);
 
         $kode_by= "TRFP-".rand(1000,9999);
@@ -288,7 +288,6 @@ function nilai_delete($id){
 
         return redirect('/dashboard/ambil/data')->with('alert-success','data telah berhasil ditambahkan');
 
-
     }
 
     function ambil_edit($id){
@@ -299,8 +298,8 @@ function nilai_delete($id){
     }
 
     function ambil_update(Request $request){
-            $this->validate($request, [
-                'bukti' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+            $request->validate([
+                'bukti' => 'required|file|image|mimes:jpeg,png,jpg,pdf|max:2048'
             ]);
     
             $kode_by= "TRFP-".rand(1000,9999);
