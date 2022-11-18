@@ -44,8 +44,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{url('/dashboard/kepsek')}}" class="brand-link">
-      {{-- <img src="{{url('/')}}/logo/logoAs.png" alt="Simeulue Tengah" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
-      <span class="brand-text font-weight-light">Sekolah</span>
+      <img src="{{url('/')}}/logo/logo_utama.png" alt="SMA MHD.SAMAN" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">SMA MHD.SAMAN</span>
     </a>
 
     <!-- Sidebar -->
