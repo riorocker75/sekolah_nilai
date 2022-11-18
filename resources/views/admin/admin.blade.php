@@ -27,7 +27,7 @@
   </div>
     <section class="content">
         @php
-            // $jlh_pasien= App\Models\Pasien::where('status',1)->count();; 
+            $jlh_siswa= App\Models\Siswa::where('status',1)->count();; 
             // $jlh_rekam= App\Models\Rekam::where('status',1)->count();;   
             // $jlh_rujuk= App\Models\Rujukan::all()->count();;   
             // $jlh_dokter= App\Models\Dokter::all()->count();;   
@@ -36,14 +36,24 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-12">
-              <div class="card">
                
-      
-              </div>
+                  <div class="small-box bg-info">
+                    <div class="inner">
+                    <h3>{{$jlh_siswa}}</h3>
+                    <p>Siswa</p>
+                    </div>
+                    <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                    </div>
+                    <a href="{{url('/dashboard/siswa/data')}}" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                  </div>
+                
+
           </div>
           <div class="col-lg-8 col-md-6 col-12">
             <div class="card">
-              
+                
            </div>
           </div>
 
