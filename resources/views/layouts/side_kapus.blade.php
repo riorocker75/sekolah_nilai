@@ -75,47 +75,65 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="{{url('/dashboard/kepsek/siswa/data')}}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Siswa
-                {{-- <span class="right badge badge-danger">New</span> --}}
-              </p>
-            </a>
-          </li>
-
-          
-
-
-              <li class="nav-item">
-            <a href="{{url('/dashboard/kepsek/nilai/data')}}" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Nilai
-                {{-- <span class="right badge badge-danger">New</span> --}}
-              </p>
-            </a>
-          </li>
-{{-- 
-            <li class="nav-item">
-            <a href="{{url('/kapus/poli')}}" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Poli
               </p>
             </a>
           </li> --}}
 
+          <li class="nav-item">
+            <a href="{{url('/dashboard/kepsek/siswa/data')}}" class="nav-link">
+              <i class="nav-icon fas fa-print"></i>
+              <p>
+                Cetak ijazah
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+
+
           
 
-           <li class="nav-item">
+
+          <li class="nav-item">
+            <a href="{{url('/dashboard/kepsek/nilai/data')}}" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Transkip
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{url('/dashboard/kepsek/transkip/data')}}" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Transkip Persiswa
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+          
+
+             <li class="nav-item">
                 <a href="{{url('/kapus/pengaturan/data')}}" class="nav-link ">
                  <i class="fa fa-lock nav-icon" aria-hidden="true"></i>
                   <p> Ganti Password</p>
                 </a>
               </li>
 
+              <li class="nav-item">
+                <a href="{{url('/kapus/role/data')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Admin</p>
+                </a>
+              </li>
+
+              
             
           
         </ul>

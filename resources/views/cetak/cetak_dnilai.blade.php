@@ -20,6 +20,7 @@
 
 
     <style type="text/css">
+      
 			.lead {
 				font-family: "Verdana";
 				font-weight: bold;
@@ -39,7 +40,7 @@
 			/* @page { size: with x height */
 			/*@page { size: 20cm 10cm; margin: 0px; }*/
 			@page {
-				size: A4;
+                size: auto;
 				margin : 0px;
 			}
 	/*		@media print {
@@ -47,7 +48,7 @@
 			  	width: 210mm;
 			  }
 			}*/
-			 .kepala{
+	 .kepala{
         text-align:center;
         font-size: 28px;
         margin:40px 120px;
@@ -99,6 +100,8 @@
     {{-- <body> --}}
 	<div class="wrapper">
 		<div class="container">
+		<div style="margin-top:248px;margin-left:60px;margin-right:60px">
+        
         <div style="position:relative;left:340px;width:500px;margin-top:40px;margin-bottom:80px">
             <div style="margin-top:50px;margin-right:300px;">
                 <p style="text-transform:uppercase">{{$siswa->nama}}</p>
@@ -115,10 +118,9 @@
              </div>
 
         </div>
-   
 
    
-       
+            <div style="margin-bottom:15px"></div>
             <div style="margin-left:600px;margin-bottom:7px">
                     <div style="display:inline-block">
                         <span style="margin:15px 40px">{{$dt->agama_raport}}</span>
@@ -147,40 +149,7 @@
                 </div>
             </div>
 
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->mm_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->mm_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->fisika_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->fisika_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->kimia_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->kimia_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->biologi_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->biologi_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->sejarah_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->sejarah_us}}</span>
-                </div>
-            </div>
+            <div style="margin-bottom:15px"></div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
@@ -255,6 +224,46 @@
                 </div>
             </div>
 
+            <div style="margin-bottom:15px"></div>
+
+
+            <div style="margin-left:600px;margin-bottom:7px">
+                <div style="display:inline-block">
+                    <span style="margin:15px 40px">{{$dt->mm_raport}}</span>
+                    <span style="margin:15px 40px">{{$dt->mm_us}}</span>
+                </div>
+            </div>
+
+            <div style="margin-left:600px;margin-bottom:7px">
+                <div style="display:inline-block">
+                    <span style="margin:15px 40px">{{$dt->fisika_raport}}</span>
+                    <span style="margin:15px 40px">{{$dt->fisika_us}}</span>
+                </div>
+            </div>
+
+            <div style="margin-left:600px;margin-bottom:7px">
+                <div style="display:inline-block">
+                    <span style="margin:15px 40px">{{$dt->kimia_raport}}</span>
+                    <span style="margin:15px 40px">{{$dt->kimia_us}}</span>
+                </div>
+            </div>
+
+            <div style="margin-left:600px;margin-bottom:7px">
+                <div style="display:inline-block">
+                    <span style="margin:15px 40px">{{$dt->biologi_raport}}</span>
+                    <span style="margin:15px 40px">{{$dt->biologi_us}}</span>
+                </div>
+            </div>
+
+            <div style="margin-left:600px;margin-bottom:7px">
+                <div style="display:inline-block">
+                    <span style="margin:15px 40px">{{$dt->sejarah_raport}}</span>
+                    <span style="margin:15px 40px">{{$dt->sejarah_us}}</span>
+                </div>
+            </div>
+
+           
+
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
                     <span style="margin:15px 40px">{{$dt->rata_raport}}</span>
@@ -277,6 +286,7 @@
             </div>
 
             
+		</div>
 
 		</div>
 	</div>

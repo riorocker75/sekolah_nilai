@@ -37,36 +37,36 @@
                  <div class="col-md-6">
                          
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nomor Induk Siswa</label>
+                                <label for="exampleInputEmail1">Nomor Induk Siswa <span style='color:red'>*</span></label>
                                 <input type="number" class="form-control" name="nis" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">NISN</label>
+                                <label for="exampleInputEmail1">NISN <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="nisn" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nomor USBN</label>
+                                <label for="exampleInputEmail1">Nomor USBN <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="no_un" required>
                             </div>
 
                             <div class="form-group">
-                              <label for="exampleInputEmail1">Angkatan</label>
+                              <label for="exampleInputEmail1">Angkatan <span style='color:red'>*</span></label>
                               <input type="number" min="2000" max="2099" class="form-control" name="angkatan" required>
                             </div>
 
                              <div class="form-group">
-                                <label for="exampleInputEmail1">Nama</label>
+                                <label for="exampleInputEmail1">Nama <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="nama" required>
                             </div>
 
                             <div class="form-group">
-                              <label for="exampleInputEmail1">Nama orang tua</label>
+                              <label for="exampleInputEmail1">Nama orang tua <span style='color:red'>*</span></label>
                               <input type="text" class="form-control" name="ortu" required>
                           </div>
                              <div class="form-group">
-                                <label for="exampleInputEmail1">Jenis Kelamin</label>
+                                <label for="exampleInputEmail1">Jenis Kelamin <span style='color:red'>*</span></label>
                                  <select class="custom-select form-control-border border-width-2"  name="kelamin" required="required">
                                         <option value="">--Pilih Kelamin--</option>
                                         <option value="1">Pria</option>
@@ -75,11 +75,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tanggal Lahir</label>
+                                <label for="exampleInputEmail1">Tanggal Lahir <span style='color:red'>*</span></label>
                                 <input type="date" class="form-control" name="tgl_lhr" required>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tempat Lahir</label>
+                                <label for="exampleInputEmail1">Tempat Lahir <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="tmp_lhr" required>
                             </div>
 

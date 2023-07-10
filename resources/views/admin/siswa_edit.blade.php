@@ -39,38 +39,38 @@
                  <div class="col-md-6">
                          
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nomor Induk Siswa</label>
+                                <label for="exampleInputEmail1">Nomor Induk Siswa <span style='color:red'>*</span></label>
                                 <input type="number" class="form-control" name="nis" value="{{$dt->nis}}" required>
                                 <input type="hidden" class="form-control" name="id" value="{{$dt->id}}" required>
 
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">NISN</label>
+                                <label for="exampleInputEmail1">NISN <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="nisn" value="{{$dt->nisn}}" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nomor USBN</label>
+                                <label for="exampleInputEmail1">Nomor USBN <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="no_un" value="{{$dt->no_un}}" required>
                             </div>
                             <div class="form-group">
-                              <label for="exampleInputEmail1">Angkatan</label>
+                              <label for="exampleInputEmail1">Angkatan <span style='color:red'>*</span></label>
                               <input type="number" min="2000" max="2099" class="form-control" value="{{$dt->angkatan}}"  name="angkatan" required>
                             </div>
 
                              <div class="form-group">
-                                <label for="exampleInputEmail1">Nama</label>
+                                <label for="exampleInputEmail1">Nama <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="nama" value="{{$dt->nama}}" required>
                             </div>
 
                             <div class="form-group">
-                              <label for="exampleInputEmail1">Nama orang tua</label>
+                              <label for="exampleInputEmail1">Nama orang tua <span style='color:red'>*</span></label>
                               <input type="text" class="form-control" name="ortu" value="{{$dt->ortu}}" required>
                           </div>
 
                              <div class="form-group">
-                                <label for="exampleInputEmail1">Jenis Kelamin</label>
+                                <label for="exampleInputEmail1">Jenis Kelamin <span style='color:red'>*</span></label>
                                  <select class="custom-select form-control-border border-width-2"  name="kelamin" required="required">
                                         <option value="{{$dt->jenis_kelamin}}" selected>{{jenis_kelamin($dt->jenis_kelamin)}}</option>
                                         <option value="1">Pria</option>
@@ -79,11 +79,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tanggal Lahir</label>
+                                <label for="exampleInputEmail1">Tanggal Lahir <span style='color:red'>*</span></label>
                                 <input type="date" class="form-control" name="tgl_lhr" value="{{date('Y-m-d',strtotime($dt->tgl_lhr))}}" required>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tempat Lahir</label>
+                                <label for="exampleInputEmail1">Tempat Lahir <span style='color:red'>*</span></label>
                                 <input type="text" class="form-control" name="tmp_lhr" value="{{$dt->tmp_lhr}}" required>
                             </div>
 

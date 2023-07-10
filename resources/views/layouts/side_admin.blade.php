@@ -91,7 +91,7 @@
               <li class="nav-item">
                 <a href="{{url('/dashboard/ambil/data')}}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Pengambilan</p>
+                  <p>Data Ijazah</p>
                 </a>
               </li>
                
@@ -99,7 +99,7 @@
                 <li class="nav-item">
                 <a href="{{url('/dashboard/role/data')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Role</p>
+                  <p>Data Admin</p>
                 </a>
               </li>
  

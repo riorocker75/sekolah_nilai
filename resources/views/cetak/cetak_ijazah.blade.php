@@ -39,7 +39,7 @@
 			/* @page { size: with x height */
 			/*@page { size: 20cm 10cm; margin: 0px; }*/
 			@page {
-				size: A4;
+				size: auto;
 				margin : 0px;
 			}
 	/*		@media print {
@@ -99,10 +99,12 @@
     {{-- <body> --}}
 	<div class="wrapper">
 		<div class="container">
-            <div style="position:relative;right:-622px">
+		<div style="margin-top:320px;margin-left:165px;margin-right:165px;">
+    
+            {{-- <div style="position:relative;right:-622px">
                 <p >Swasta</p>
 
-            </div>
+            </div> --}}
         <div style="position:relative;left:140px;width:600px;margin-top:40px;margin-bottom:80px">
             <div style="margin-top:50px;margin-right:300px;">
                 <p style="text-transform:uppercase">MA'HAD MUHAMMAD SAMAN</p>
@@ -164,7 +166,7 @@
 
           
 
-            <div style="margin-left:400px;margin-top:45px">
+            <div style="margin-left:400px;margin-top:135px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Kabupaten Deli Serdang,</span>
                     <span style="margin:25px 5px">{{format_tanggal(date('Y-m-d'))}}</span>
@@ -179,6 +181,7 @@
             </div>
 
             
+		</div>
 
 		</div>
 	</div>

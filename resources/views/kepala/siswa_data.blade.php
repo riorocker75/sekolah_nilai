@@ -6,12 +6,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Siswa</h1>
+            <h1 class="m-0">Data Ijazah</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Data Siswa</li>
+              <li class="breadcrumb-item active">Data Ijazah</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,7 +26,7 @@
       <div class="container-fluid">
          <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data semua Siswa</h3>
+                <h3 class="card-title">Data semua Ijazah</h3>
                 {{-- <a href="{{url('/dashboard/siswa/add')}}" class="btn btn-primary float-right">Tambah data</a> --}}
               </div>
               <!-- /.card-header -->

@@ -27,10 +27,10 @@
          <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Data semua Transkip</h3>
-                <a href="{{url('/dashboard/kepsek/nilai/cetak')}}" class="btn btn-default float-right"> <i class="fa fa-print" aria-hidden="true"></i> Cetak</a>
+                {{-- <a href="{{url('/dashboard/siswa/add')}}" class="btn btn-primary float-right">Tambah data</a> --}}
               </div>
               <!-- /.card-header -->
-              <div class="card-body"> 
+              <div class="card-body">
                 <table id="table1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
@@ -38,8 +38,10 @@
                     <th>Nama</th>
                     <th>Nis</th>
                     <th>Nisn</th>
+                    <th>Nomor USBN</th>
                     <th>Angkatan</th>
-                    <th>Nilai Rerata</th>
+                    <th>Cetak Format</th>
+
                     {{-- <th>Edit</th> --}}
                   </tr>
                   </thead>
@@ -55,13 +57,17 @@
 
                                 <td>{{$siswa->nis}}</td>
                                 <td>{{$siswa->nisn}} </td>
+                                <td>{{$siswa->no_un}} </td>
                                 <td>{{$siswa->angkatan}} </td>
+                               
 
-                                <td>Nilai Rerata Raport:{{$dt->rata_raport}} <br> Nilai Rerata US:{{$dt->rata_us}} </td>
+                                <td>
+                                    <a href="{{url('/dashboard/kepsek/nilai/cetak/daftar_nilai/'.$dt->id.'')}}" class="btn btn-default">Transkrip Nilai</a>
+                                </td>
 
                                 {{-- <td>
-                                <a href="{{url('/dashboard/nilai/edit/'.$dt->id.'')}}" class="btn btn-warning">Ubah</a> 
-                                <a href="{{url('/dashboard/nilai/delete/'.$dt->id.'')}}" class="btn btn-danger">Hapus</a>
+                                    <a href="{{url('/dashboard/siswa/edit/'.$dt->id.'')}}" class="btn btn-warning">Ubah</a>
+                                <a href="{{url('/dashboard/siswa/delete/'.$dt->id.'')}}" class="btn btn-danger">Hapus</a>
                                 </td> --}}
                             </tr>
                       @endforeach

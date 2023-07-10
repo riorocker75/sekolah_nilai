@@ -66,6 +66,8 @@ Route::get('/dashboard/ambil/delete/{id}', [AdminCtrl::class,'ambil_delete']);
 // bagian kepsek
 Route::get('/dashboard/kepsek', [KapusCtrl::class,'index']);
 Route::get('/dashboard/kepsek/siswa/data', [KapusCtrl::class,'siswa']);
+Route::get('/dashboard/kepsek/transkip/data', [KapusCtrl::class,'transkrip']);
+
 Route::get('/dashboard/kepsek/nilai/data', [KapusCtrl::class,'nilai']);
 Route::get('/dashboard/kepsek/nilai/cetak', [KapusCtrl::class,'cetak_nilai']);
 
@@ -77,13 +79,20 @@ Route::get('/dashboard/kepsek/nilai/cetak/ijazah/{id}', [KapusCtrl::class,'cetak
 
 //
 
-// role 
+// role admin
 Route::get('/dashboard/role/data', [AdminCtrl::class,'role']);
 Route::post('/dashboard/role/act', [AdminCtrl::class,'role_act']);
 
 Route::get('/dashboard/role/edit/{id}', [AdminCtrl::class,'role_edit']);
 Route::post('/dashboard/role/update', [AdminCtrl::class,'role_update']);
 Route::get('/dashboard/role/delete/{id}', [AdminCtrl::class,'role_delete']);
+// ----kapus
+Route::get('/dashboard/kepsek/role/data', [KapusCtrl::class,'role']);
+Route::post('/dashboard/kepsek/role/act', [KapusCtrl::class,'role_act']);
+
+Route::get('/dashboard/kepsek/role/edit/{id}', [KapusCtrl::class,'role_edit']);
+Route::post('/dashboard/kepsek/role/update', [KapusCtrl::class,'role_update']);
+Route::get('/dashboard/kepsek/role/delete/{id}', [KapusCtrl::class,'role_delete']);
 
 // profile ubah password
 Route::get('/dashboard/pengaturan/data', [AdminCtrl::class,'pengaturan']);

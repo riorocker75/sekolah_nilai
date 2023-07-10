@@ -45,9 +45,18 @@ class KapusCtrl extends Controller
         ]);
     }
 
+
+
     function nilai(){
         $data=Nilai::orderBy('id','desc')->get();
         return view('kepala.nilai_data',[
+            'data' =>$data
+        ]);
+    }
+
+    function transkrip(){
+        $data=Nilai::orderBy('id','desc')->get();
+        return view('kepala.transkip_siswa',[
             'data' =>$data
         ]);
     }
@@ -78,7 +87,68 @@ class KapusCtrl extends Controller
     }
 
 
+    
 
+    function role(){
+        $data=Admin::orderBy('id','asc')->get();
+        return view('admin.k_role_data',[
+            'data' =>$data
+        ]);
+    }
+   
+     function role_edit($id){
+        $data_user=Admin::where('id',$id)->first();
+        $data=Admin::orderBy('id','asc')->get();
+   
+        return view('admin.k_role_data',[
+            'data' =>$data,
+            'd_user' =>$data_user
+        ]);
+    }
+   
+     function role_update(Request $request){
+       $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'role' => 'required',
+       ]);
+       $cek_admin=Admin::where('level',1)->count();
+       $cek_kapus=Admin::where('level',2)->count();
+   
+   
+       if($cek_admin < 3 || $cek_kapus < 1 ){
+           if($request->role == 1){
+               Admin::insert([
+                   'username' => $request->username,
+                   'password' => bcrypt($request->password),
+                   'level' => 1,
+                   'status' => 1,
+               ]);
+        return redirect('/dashboard/kepsek/role/data')->with('alert-success','data telah berhasil ditambahkan');
+   
+            }elseif($request->role == 2){
+           Admin::insert([
+                'username' => $request->username,
+               'password' => bcrypt($request->password),
+               'level' => 2,
+               'status' => 1
+           ]);
+        return redirect('/dashboard/kepsek/role/data')->with('alert-success','data telah berhasil ditambahkan');
+   
+       }
+       }else{
+   
+        return redirect('/dashboard/kepsek/role/data')->with('alert-success','maaf data sudah maksimal');
+   
+       }
+       
+    }
+   
+    function role_delete($id){
+        Admin::where('id',$id)->delete();
+        return redirect('/dashboard/kepsek/role/data')->with('alert-success','Data telah terhapus');
+   
+    }
 
       
     function pengaturan(){
