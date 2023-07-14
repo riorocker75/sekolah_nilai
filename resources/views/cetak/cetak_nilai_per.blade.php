@@ -7,7 +7,7 @@
     <title>Cetak</title>
 {{-- databales --}}
   <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
-  <link rel="stylesheet" hr ef="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
 
 <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css?v=3.2.0')}}">
@@ -118,7 +118,7 @@
         </div>
 
    <div style="text-align:center;margin-top:30px">
-        <h5> Rekapan Nilai Siswa </h5>
+        <h5> Rekapan Nilai </h5>
 			<h5>{{date('Y')}}</h5>
    </div>
    <table id="absensi" class="table table-bordered table-hover">

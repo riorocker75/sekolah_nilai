@@ -109,7 +109,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{url('/dashboard/kepsek/transkip/data')}}" class="nav-link">
+            <a href="{{url('/dashboard/kepsek/transkip/persiswa/data')}}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Transkip Persiswa

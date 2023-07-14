@@ -61,6 +61,13 @@ class KapusCtrl extends Controller
         ]);
     }
 
+    function transkrip_persiswa(){
+        $data=Nilai::orderBy('id','desc')->get();
+        return view('kepala.transkip_persiswa',[
+            'data' =>$data
+        ]);
+    }
+
     function cetak_nilai(){
         $data=Nilai::orderBy('rata_raport','asc')->get();
         return view('cetak.cetak_nilai',[
@@ -68,6 +75,14 @@ class KapusCtrl extends Controller
         ]);
     }
 
+    function cetak_nilai_per(){
+        $data=Nilai::orderBy('rata_raport','asc')->get();
+        return view('cetak.cetak_nilai_per',[
+            'data' =>$data
+        ]);
+    }
+
+   
     function cetak_daftar_nilai($id){
         $dt=Nilai::where('id',$id)->first();
         $siswa=Siswa::where('id',$dt->siswa_id)->first();
@@ -76,6 +91,8 @@ class KapusCtrl extends Controller
             'siswa' =>$siswa
         ]);
     }
+
+  
 
     function cetak_ijazah($id){
         $dt=Nilai::where('id',$id)->first();

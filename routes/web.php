@@ -68,11 +68,16 @@ Route::get('/dashboard/kepsek', [KapusCtrl::class,'index']);
 Route::get('/dashboard/kepsek/siswa/data', [KapusCtrl::class,'siswa']);
 Route::get('/dashboard/kepsek/transkip/data', [KapusCtrl::class,'transkrip']);
 
+Route::get('/dashboard/kepsek/transkip/persiswa/data', [KapusCtrl::class,'transkrip_persiswa']);
+
+
 Route::get('/dashboard/kepsek/nilai/data', [KapusCtrl::class,'nilai']);
 Route::get('/dashboard/kepsek/nilai/cetak', [KapusCtrl::class,'cetak_nilai']);
 
 
 Route::get('/dashboard/kepsek/nilai/cetak/daftar_nilai/{id}', [KapusCtrl::class,'cetak_daftar_nilai']);
+Route::get('/dashboard/kepsek/nilai/cetak/daftar_nilai_siswa/{id}', [KapusCtrl::class,'cetak_nilai_per']);
+
 Route::get('/dashboard/kepsek/nilai/cetak/ijazah/{id}', [KapusCtrl::class,'cetak_ijazah']);
 
 
