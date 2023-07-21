@@ -99,7 +99,7 @@
     {{-- <body> --}}
 	<div class="wrapper">
 		<div class="container">
-		<div style="margin-top:320px;margin-left:165px;margin-right:165px;">
+		<div style="margin-top:370px;margin-left:99px;margin-right:99px;">
     
             {{-- <div style="position:relative;right:-622px">
                 <p >Swasta</p>
@@ -174,7 +174,7 @@
             </div>
 
 
-            <div style="margin-left:500px;margin-top:75px">
+            <div style="margin-left:500px;margin-top:75px;margin-bottom:105px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Alirman, S.Ag</span>
                 </div>
