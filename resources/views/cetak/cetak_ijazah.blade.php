@@ -176,7 +176,7 @@
 
             <div style="margin-left:500px;margin-top:75px">
                 <div style="display:inline-block">
-                    <span style="margin:35px 15px">ADDIEN FAHMI, S.Ag</span>
+                    <span style="margin:35px 15px">Alirman, S.Ag</span>
                 </div>
             </div>
 
