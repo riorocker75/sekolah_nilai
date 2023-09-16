@@ -15,6 +15,14 @@ use App\Models\User;
 use App\Models\Admin;
 use App\Models\Siswa;
 use App\Models\Nilai;
+
+use App\Models\Semester1;
+use App\Models\Semester2;
+use App\Models\Semester3;
+use App\Models\Semester4;
+use App\Models\Semester5;
+use App\Models\Semester6;
+
 use App\Models\Transaksi;
 
 
@@ -118,7 +126,7 @@ class AdminCtrl extends Controller
 
     function siswa_delete($id){
         $bukti=Transaksi::where('siswa_id',$id)->first();
-        File::delete('upload'.$bukti->bukti);
+        // File::delete('upload'.$bukti->bukti);
         
         Transaksi::where('siswa_id',$id)->delete();
         Nilai::where('siswa_id',$id)->delete();
@@ -192,26 +200,179 @@ function nilai_act(Request $request){
     'tanggal' =>$date,
     'status' => 1
 ]);
+
+DB::table('semester1')->insert([
+    'siswa_id' => $request->siswa,
+    'agama_raport' => $request->agama_raport_1,
+    'pkn_raport' => $request->pkn_raport_1,
+    'indo_raport' => $request->indo_raport_1,
+ 
+    'ing_raport' => $request->ing_raport_1,
+    'mm_raport' => $request->mm_raport_1,
+    'fisika_raport' => $request->fisika_raport_1,
+    'kimia_raport' => $request->kimia_raport_1,
+    'biologi_raport' => $request->biologi_raport_1,
+    'sejarah_raport' => $request->sejarah_raport_1,
+    'sbk_raport' => $request->sbk_raport_1,
+    'penjas_raport' => $request->penjas_raport_1,
+    'tik_raport' => $request->tik_raport_1,
+    'keting_raport' => $request->keting_raport_1,
+    'mulok1_raport' => $request->mulok1_raport_1,
+    'mulok2_raport' => $request->mulok2_raport_1,
+    'rata_raport' => $request->rata_raport_1,
+    'tanggal' =>$date,
+    'status' => 1
+]);
+
+DB::table('semester2')->insert([
+    'siswa_id' => $request->siswa,
+    'agama_raport' => $request->agama_raport_2,
+    'pkn_raport' => $request->pkn_raport_2,
+    'indo_raport' => $request->indo_raport_2,
+ 
+    'ing_raport' => $request->ing_raport_2,
+    'mm_raport' => $request->mm_raport_2,
+    'fisika_raport' => $request->fisika_raport_2,
+    'kimia_raport' => $request->kimia_raport_2,
+    'biologi_raport' => $request->biologi_raport_2,
+    'sejarah_raport' => $request->sejarah_raport_2,
+    'sbk_raport' => $request->sbk_raport_2,
+    'penjas_raport' => $request->penjas_raport_2,
+    'tik_raport' => $request->tik_raport_2,
+    'keting_raport' => $request->keting_raport_2,
+    'mulok1_raport' => $request->mulok1_raport_2,
+    'mulok2_raport' => $request->mulok2_raport_2,
+    'rata_raport' => $request->rata_raport_1,
+    'tanggal' =>$date,
+    'status' => 1
+]);
+
+DB::table('semester3')->insert([
+    'siswa_id' => $request->siswa,
+    'agama_raport' => $request->agama_raport_3,
+    'pkn_raport' => $request->pkn_raport_3,
+    'indo_raport' => $request->indo_raport_3,
+ 
+    'ing_raport' => $request->ing_raport_3,
+    'mm_raport' => $request->mm_raport_3,
+    'fisika_raport' => $request->fisika_raport_3,
+    'kimia_raport' => $request->kimia_raport_3,
+    'biologi_raport' => $request->biologi_raport_3,
+    'sejarah_raport' => $request->sejarah_raport_3,
+    'sbk_raport' => $request->sbk_raport_3,
+    'penjas_raport' => $request->penjas_raport_3,
+    'tik_raport' => $request->tik_raport_3,
+    'keting_raport' => $request->keting_raport_3,
+    'mulok1_raport' => $request->mulok1_raport_3,
+    'mulok2_raport' => $request->mulok2_raport_3,
+    'rata_raport' => $request->rata_raport_3,
+    'tanggal' =>$date,
+    'status' => 1
+]);
+
+DB::table('semester4')->insert([
+    'siswa_id' => $request->siswa,
+    'agama_raport' => $request->agama_raport_4,
+    'pkn_raport' => $request->pkn_raport_4,
+    'indo_raport' => $request->indo_raport_4,
+ 
+    'ing_raport' => $request->ing_raport_4,
+    'mm_raport' => $request->mm_raport_4,
+    'fisika_raport' => $request->fisika_raport_4,
+    'kimia_raport' => $request->kimia_raport_4,
+    'biologi_raport' => $request->biologi_raport_4,
+    'sejarah_raport' => $request->sejarah_raport_4,
+    'sbk_raport' => $request->sbk_raport_4,
+    'penjas_raport' => $request->penjas_raport_4,
+    'tik_raport' => $request->tik_raport_4,
+    'keting_raport' => $request->keting_raport_4,
+    'mulok1_raport' => $request->mulok1_raport_4,
+    'mulok2_raport' => $request->mulok2_raport_4,
+    'rata_raport' => $request->rata_raport_4,
+    'tanggal' =>$date,
+    'status' => 1
+]);
+
+
+DB::table('semester5')->insert([
+    'siswa_id' => $request->siswa,
+    'agama_raport' => $request->agama_raport_5,
+    'pkn_raport' => $request->pkn_raport_5,
+    'indo_raport' => $request->indo_raport_5,
+ 
+    'ing_raport' => $request->ing_raport_5,
+    'mm_raport' => $request->mm_raport_5,
+    'fisika_raport' => $request->fisika_raport_5,
+    'kimia_raport' => $request->kimia_raport_5,
+    'biologi_raport' => $request->biologi_raport_5,
+    'sejarah_raport' => $request->sejarah_raport_5,
+    'sbk_raport' => $request->sbk_raport_5,
+    'penjas_raport' => $request->penjas_raport_5,
+    'tik_raport' => $request->tik_raport_5,
+    'keting_raport' => $request->keting_raport_5,
+    'mulok1_raport' => $request->mulok1_raport_5,
+    'mulok2_raport' => $request->mulok2_raport_5,
+    'rata_raport' => $request->rata_raport_5,
+    'tanggal' =>$date,
+    'status' => 1
+]);
+
+DB::table('semester6')->insert([
+    'siswa_id' => $request->siswa,
+    'agama_raport' => $request->agama_raport_6,
+    'pkn_raport' => $request->pkn_raport_6,
+    'indo_raport' => $request->indo_raport_6,
+ 
+    'ing_raport' => $request->ing_raport_6,
+    'mm_raport' => $request->mm_raport_6,
+    'fisika_raport' => $request->fisika_raport_6,
+    'kimia_raport' => $request->kimia_raport_6,
+    'biologi_raport' => $request->biologi_raport_6,
+    'sejarah_raport' => $request->sejarah_raport_6,
+    'sbk_raport' => $request->sbk_raport_6,
+    'penjas_raport' => $request->penjas_raport_6,
+    'tik_raport' => $request->tik_raport_6,
+    'keting_raport' => $request->keting_raport_6,
+    'mulok1_raport' => $request->mulok1_raport_6,
+    'mulok2_raport' => $request->mulok2_raport_6,
+    'rata_raport' => $request->rata_raport_6,
+    'tanggal' =>$date,
+    'status' => 1
+]);
+
 return redirect('/dashboard/nilai/data')->with('alert-success','Data Berhasil disimpan');
 
 
 }
 
 function nilai_edit($id){
-    $data=Nilai::where('id',$id)->get();
+    $data=Nilai::where('siswa_id',$id)->get();
+    $data1=Semester1::where('siswa_id',$id)->get();
+    $data2=Semester2::where('siswa_id',$id)->get();
+    $data3=Semester3::where('siswa_id',$id)->get();
+    $data4=Semester4::where('siswa_id',$id)->get();
+    $data5=Semester5::where('siswa_id',$id)->get();
+    $data6=Semester6::where('siswa_id',$id)->get();
+
     return view('admin.nilai_edit',[
-        'data' =>$data
+        'data' =>$data,
+        'data1' =>$data1,
+        'data2' =>$data2,
+        'data3' =>$data3,
+        'data4' =>$data4,
+        'data5' =>$data5,
+        'data6' =>$data6
     ]);
 }
 
 function nilai_update(Request $request){
     $request->validate([
-        'id' => 'required'
+        'siswa_id' => 'required'
     ]);
-    $id=$request->id;
+    $id=$request->siswa_id;
      $date=date('Y-m-d');
 
- DB::table('nilai')->where('id',$id)->update([
+ DB::table('nilai')->where('siswa_id',$id)->update([
     'agama_raport' => $request->agama_raport,
     'agama_us' => $request->agama_us,
     'pkn_raport' => $request->pkn_raport,
@@ -245,12 +406,150 @@ function nilai_update(Request $request){
     'rata_raport' => $request->rata_raport,
     'rata_us' => $request->rata_us,
 ]);
+
+
+DB::table('semester1')->where('siswa_id',$id)->update([
+    'agama_raport' => $request->agama_raport_1,
+    'pkn_raport' => $request->pkn_raport_1,
+    'indo_raport' => $request->indo_raport_1,
+ 
+    'ing_raport' => $request->ing_raport_1,
+    'mm_raport' => $request->mm_raport_1,
+    'fisika_raport' => $request->fisika_raport_1,
+    'kimia_raport' => $request->kimia_raport_1,
+    'biologi_raport' => $request->biologi_raport_1,
+    'sejarah_raport' => $request->sejarah_raport_1,
+    'sbk_raport' => $request->sbk_raport_1,
+    'penjas_raport' => $request->penjas_raport_1,
+    'tik_raport' => $request->tik_raport_1,
+    'keting_raport' => $request->keting_raport_1,
+    'mulok1_raport' => $request->mulok1_raport_1,
+    'mulok2_raport' => $request->mulok2_raport_1,
+    'rata_raport' => $request->rata_raport_1
+   
+]);
+
+DB::table('semester2')->where('siswa_id',$id)->update([
+    'agama_raport' => $request->agama_raport_2,
+    'pkn_raport' => $request->pkn_raport_2,
+    'indo_raport' => $request->indo_raport_2,
+ 
+    'ing_raport' => $request->ing_raport_2,
+    'mm_raport' => $request->mm_raport_2,
+    'fisika_raport' => $request->fisika_raport_2,
+    'kimia_raport' => $request->kimia_raport_2,
+    'biologi_raport' => $request->biologi_raport_2,
+    'sejarah_raport' => $request->sejarah_raport_2,
+    'sbk_raport' => $request->sbk_raport_2,
+    'penjas_raport' => $request->penjas_raport_2,
+    'tik_raport' => $request->tik_raport_2,
+    'keting_raport' => $request->keting_raport_2,
+    'mulok1_raport' => $request->mulok1_raport_2,
+    'mulok2_raport' => $request->mulok2_raport_2,
+    'rata_raport' => $request->rata_raport_1
+   
+]);
+
+DB::table('semester3')->where('siswa_id',$id)->update([
+    'agama_raport' => $request->agama_raport_3,
+    'pkn_raport' => $request->pkn_raport_3,
+    'indo_raport' => $request->indo_raport_3,
+ 
+    'ing_raport' => $request->ing_raport_3,
+    'mm_raport' => $request->mm_raport_3,
+    'fisika_raport' => $request->fisika_raport_3,
+    'kimia_raport' => $request->kimia_raport_3,
+    'biologi_raport' => $request->biologi_raport_3,
+    'sejarah_raport' => $request->sejarah_raport_3,
+    'sbk_raport' => $request->sbk_raport_3,
+    'penjas_raport' => $request->penjas_raport_3,
+    'tik_raport' => $request->tik_raport_3,
+    'keting_raport' => $request->keting_raport_3,
+    'mulok1_raport' => $request->mulok1_raport_3,
+    'mulok2_raport' => $request->mulok2_raport_3,
+    'rata_raport' => $request->rata_raport_3
+   
+]);
+
+DB::table('semester4')->where('siswa_id',$id)->update([
+    'agama_raport' => $request->agama_raport_4,
+    'pkn_raport' => $request->pkn_raport_4,
+    'indo_raport' => $request->indo_raport_4,
+ 
+    'ing_raport' => $request->ing_raport_4,
+    'mm_raport' => $request->mm_raport_4,
+    'fisika_raport' => $request->fisika_raport_4,
+    'kimia_raport' => $request->kimia_raport_4,
+    'biologi_raport' => $request->biologi_raport_4,
+    'sejarah_raport' => $request->sejarah_raport_4,
+    'sbk_raport' => $request->sbk_raport_4,
+    'penjas_raport' => $request->penjas_raport_4,
+    'tik_raport' => $request->tik_raport_4,
+    'keting_raport' => $request->keting_raport_4,
+    'mulok1_raport' => $request->mulok1_raport_4,
+    'mulok2_raport' => $request->mulok2_raport_4,
+    'rata_raport' => $request->rata_raport_4
+   
+]);
+
+
+DB::table('semester5')->where('siswa_id',$id)->update([
+    'agama_raport' => $request->agama_raport_5,
+    'pkn_raport' => $request->pkn_raport_5,
+    'indo_raport' => $request->indo_raport_5,
+ 
+    'ing_raport' => $request->ing_raport_5,
+    'mm_raport' => $request->mm_raport_5,
+    'fisika_raport' => $request->fisika_raport_5,
+    'kimia_raport' => $request->kimia_raport_5,
+    'biologi_raport' => $request->biologi_raport_5,
+    'sejarah_raport' => $request->sejarah_raport_5,
+    'sbk_raport' => $request->sbk_raport_5,
+    'penjas_raport' => $request->penjas_raport_5,
+    'tik_raport' => $request->tik_raport_5,
+    'keting_raport' => $request->keting_raport_5,
+    'mulok1_raport' => $request->mulok1_raport_5,
+    'mulok2_raport' => $request->mulok2_raport_5,
+    'rata_raport' => $request->rata_raport_5
+   
+]);
+
+DB::table('semester6')->where('siswa_id',$id)->update([
+    'agama_raport' => $request->agama_raport_6,
+    'pkn_raport' => $request->pkn_raport_6,
+    'indo_raport' => $request->indo_raport_6,
+ 
+    'ing_raport' => $request->ing_raport_6,
+    'mm_raport' => $request->mm_raport_6,
+    'fisika_raport' => $request->fisika_raport_6,
+    'kimia_raport' => $request->kimia_raport_6,
+    'biologi_raport' => $request->biologi_raport_6,
+    'sejarah_raport' => $request->sejarah_raport_6,
+    'sbk_raport' => $request->sbk_raport_6,
+    'penjas_raport' => $request->penjas_raport_6,
+    'tik_raport' => $request->tik_raport_6,
+    'keting_raport' => $request->keting_raport_6,
+    'mulok1_raport' => $request->mulok1_raport_6,
+    'mulok2_raport' => $request->mulok2_raport_6,
+    'rata_raport' => $request->rata_raport_6
+   
+]);
+
+
 return redirect('/dashboard/nilai/data')->with('alert-success','Data Berhasil update');
 
 }
 
 function nilai_delete($id){
-    Nilai::where('id',$id)->delete();
+    Nilai::where('siswa_id',$id)->delete();
+
+    Semester1::where('siswa_id',$id)->delete();
+    Semester2::where('siswa_id',$id)->delete();
+    Semester3::where('siswa_id',$id)->delete();
+    Semester4::where('siswa_id',$id)->delete();
+    Semester5::where('siswa_id',$id)->delete();
+    Semester6::where('siswa_id',$id)->delete();
+
     return redirect('/dashboard/nilai/data')->with('alert-success','data telah berhasil ditambahkan');
 
 }

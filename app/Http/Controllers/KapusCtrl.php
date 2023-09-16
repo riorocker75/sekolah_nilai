@@ -17,7 +17,12 @@ use App\Models\Siswa;
 use App\Models\Nilai;
 use App\Models\Transaksi;
 
-
+use App\Models\Semester1;
+use App\Models\Semester2;
+use App\Models\Semester3;
+use App\Models\Semester4;
+use App\Models\Semester5;
+use App\Models\Semester6;
 
 use App\Models\Admin;
 

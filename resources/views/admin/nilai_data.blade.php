@@ -57,8 +57,8 @@
                                 <td>Nilai Rerata Raport:{{$dt->rata_raport}} <br> Nilai Rerata US:{{$dt->rata_us}} </td>
 
                                 <td>
-                                    <a href="{{url('/dashboard/nilai/edit/'.$dt->id.'')}}" class="btn btn-warning">Ubah</a>
-                                <a href="{{url('/dashboard/nilai/delete/'.$dt->id.'')}}" class="btn btn-danger">Hapus</a>
+                                    <a href="{{url('/dashboard/nilai/edit/'.$dt->siswa_id.'')}}" class="btn btn-warning">Ubah</a>
+                                <a href="{{url('/dashboard/nilai/delete/'.$dt->siswa_id.'')}}" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                       @endforeach
