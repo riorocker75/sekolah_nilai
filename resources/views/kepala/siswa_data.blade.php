@@ -66,6 +66,7 @@
                                 <td>
                                     <a href="{{url('/dashboard/kepsek/nilai/cetak/daftar_nilai/'.$dt->id.'')}}" class="btn btn-default">Daftar Nilai</a>
                                 <a href="{{url('/dashboard/kepsek/nilai/cetak/ijazah/'.$dt->id.'')}}" class="btn btn-default">Ijazah</a>
+                                <a href="{{url('/dashboard/kepsek/nilai/cetak/daftar_nilai_semester/'.$dt->siswa_id.'')}}" class="btn btn-default">Nilai Semester</a>
                                 </td>
 
                                 {{-- <td>

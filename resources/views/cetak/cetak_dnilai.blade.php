@@ -110,7 +110,7 @@
                  <p style="text-transform:uppercase">{{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</p>
              </div>
              <div style="">
-                 <p style="text-transform:uppercase">{{$siswa->nis}}31231</p>
+                 <p style="text-transform:uppercase">{{$siswa->nis}}</p>
              </div>
          
              <div style="">
@@ -205,8 +205,8 @@
 
                 <div style="margin-left:600px;margin-top:-27px">
                     <div style="display:inline-block">
-                        <span style="margin:15px 40px">{{$dt->mulok1_raport}}</span>
-                        <span style="margin:15px 40px">{{$dt->mulok1_us}}</span>
+                        <span style="margin:15px 40px">{{$dt->mulok2_raport}}</span>
+                        <span style="margin:15px 40px">{{$dt->mulok2_us}}</span>
                     </div>
                 </div>
             </div>

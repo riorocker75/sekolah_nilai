@@ -97,6 +97,29 @@ class KapusCtrl extends Controller
         ]);
     }
 
+    function cetak_daftar_nilai_semester($id){
+        $dt=Nilai::where('siswa_id',$id)->first();
+       
+        $dt1=Semester1::where('siswa_id',$id)->first();
+        $dt2=Semester2::where('siswa_id',$id)->first();
+        $dt3=Semester3::where('siswa_id',$id)->first();
+        $dt4=Semester4::where('siswa_id',$id)->first();
+        $dt5=Semester5::where('siswa_id',$id)->first();
+        $dt6=Semester6::where('siswa_id',$id)->first();
+        
+
+        $siswa=Siswa::where('id',$dt->siswa_id)->first();
+        return view('cetak.cetak_dnilai_semester',[
+            'dt' =>$dt,
+            'dt1' =>$dt1,
+            'dt2' =>$dt2,
+            'dt3' =>$dt3,
+            'dt4' =>$dt4,
+            'dt5' =>$dt5,
+            'dt6' =>$dt6,
+            'siswa' =>$siswa
+        ]);
+    }
   
 
     function cetak_ijazah($id){
