@@ -99,86 +99,79 @@
     {{-- <body> --}}
 	<div class="wrapper">
 		<div class="container">
-		<div style="margin-top:370px;margin-left:99px;margin-right:99px;">
+		<div style="margin-top:128px;margin-left:99px;margin-right:99px;">
     
             {{-- <div style="position:relative;right:-622px">
                 <p >Swasta</p>
 
             </div> --}}
-        <div style="position:relative;left:140px;width:600px;margin-top:40px;margin-bottom:80px">
+            <div style="margin-top:40px;">
+                <h5 style='text-align:center;font-weight:400'> KEMENTRIAN PENDIDIKAN</h5>
+                <h5 style='text-align:center;font-weight:400'> KEBUDAYAAN RISET DAN TEKNOLOGI</h5>
+                <h5 style='text-align:center;font-weight:400'> REPUBLIK INDONESIA</h5>
+                    <br>
+                    <br>
+                   
+                    <h5 style='text-align:center;font-weight:600'> IJAZAH</h5>
+                    <br>
+                    <br>
+                <h5 style='text-align:center;font-weight:400'> SEKOLAH MENENGAH ATAS</h5>
+                <h5 style='text-align:center;font-weight:400'> PEMINATAN MATEMATIKA DAN ILMU PENGETAHUAN ALAM</h5>
+                 <h5 style='text-align:center;font-weight:400'> TAHUN PELAJARAN {{ date('Y', strtotime('-1 year')) }}/{{date('Y')}}</h5>
+              </div>
+        <div style="position:relative;left:140px;width:100%;margin-top:40px;margin-bottom:80px">
             <div style="margin-top:50px;margin-right:300px;">
-                <p style="text-transform:uppercase">MA'HAD MUHAMMAD SAMAN</p>
+                <p style="">Yand bertanda tangan dibawah ini, Kepala Sekolah Menengah Atas Swasta</p>
+                <p style="">Ma'had Muhammad Saman Sunggal</p>
+                <p style="">Nomor Pokok Sekolah Nasional : 10262125</p>
+                <p style="">Kabupaten / Kota Deli Serdang</p>
+                <p style="">Provinsi Sumatera Utara</p>
+                <p style="">menerangkan bahwa </p>
+                <p style="">Nama <span style='margin-left:190px'>: {{$siswa->nama}}</span></p>
+                <p style="">Tempat, tanggal lahir <span style='margin-left:85px'>: {{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</span></p>
+                <p style="">Nama orang tua / wali <span style='margin-left:75px'>: {{$siswa->ortu}}</span></p>
+                <p style="">Nomor induk siswa <span style='margin-left:100px'>: {{$siswa->nis}}</span></p>
+                <p style="">Nomor induk siswa nasional <span style='margin-left:38px'>: {{$siswa->nisn}}</span></p>
+
+                <br>
+                <br>
+               
+                <h5 style='text-align:center;font-weight:600'> LULUS</h5>
+                <br>
+                <br>
+                <p style="">Dari sekolah menengah atas setelah memenuhi seluruh kriteria sesuai dengan</p>
+                <p style="">Peraturan perundang - undangan yang diumumkan pada tanggal </p>
+
+
             </div>
-            <div style="margin-left:150px">
-                 <p style="text-transform:uppercase">10262125</p>
-             </div>
-             <div style="margin-left:60px">
-                 <p >Deliserdang</p>
-             </div>
-         
-             <div style="margin-left:32px">
-                 <p >Sumatera Utara</p>
-             </div>
-
-        </div>
-
-
-        <div style="position:relative;left:400px;width:600px;margin-top:40px;margin-bottom:80px">
-            <div style="margin-top:50px;margin-right:300px;">
-                <p style="text-transform:uppercase">{{$siswa->nama}}</p>
-            </div>
-            <div >
-                <p style="text-transform:uppercase">{{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</p>
-
-             </div>
-             <div >
-                <p style="text-transform:uppercase">{{$siswa->ortu}}</p>
-             </div>
-
-             <div>
-                <p style="text-transform:uppercase">{{$siswa->nis}}</p>
-             </div>
-
-             <div>
-                <p style="text-transform:uppercase">{{$siswa->nisn}}</p>
-             </div>
-
-             <div>
-                <p style="text-transform:uppercase">{{$siswa->no_un}}</p>
-             </div>
-
-             <div>
-                <p style="text-transform:uppercase">SMA Swasta Ma'had Muhammad Saman</p>
-             </div>
-
-             <div>
-                <p style="text-transform:uppercase">SMA Swasta Ma'had Muhammad Saman</p>
-             </div>
-         
-            
-
-        </div>
-   
-
-   
-       
-
-
           
 
-            <div style="margin-left:400px;margin-top:135px">
-                <div style="display:inline-block">
-                    <span style="margin:35px 15px">Kabupaten Deli Serdang,</span>
-                    <span style="margin:25px 5px">{{format_tanggal(date('Y-m-d'))}}</span>
-                </div>
-            </div>
+        </div>
 
 
-            <div style="margin-left:500px;margin-top:75px;margin-bottom:105px">
-                <div style="display:inline-block">
-                    <span style="margin:35px 15px">Alirman, S.Ag</span>
-                </div>
+        <div style="margin-left:500px;margin-top:45px">
+            <div style="display:inline-block">
+                <span style="margin:35px 15px">Kabupaten Deli Serdang,</span>
+                <span style="margin:25px 5px">{{format_tanggal(date('Y-m-d'))}}</span>
             </div>
+        </div>
+
+        <div style="margin-left:500px;margin-top:5px">
+            <div style="display:inline-block">
+                <span style="margin:35px 15px">Kepala Sekolah</span>
+            </div>
+        </div>
+
+        <div style="margin-left:500px;margin-top:75px">
+            <div style="display:inline-block">
+                <span style="margin:35px 15px">Alirman, S.Ag</span>
+            </div>
+        </div>
+        <div style="margin-left:500px;margin-top:5px">
+            <div style="display:inline-block">
+                <span style="margin:35px 15px">NIP.</span>
+            </div>
+        </div>
 
             
 		</div>

@@ -96,11 +96,11 @@
 }
 	</style>
 </head>
-{{-- <body onload="window.print();"> --}}
-    <body>
+<body onload="window.print();">
+    {{-- <body> --}}
 	<div class="wrapper">
 		<div class="container">
-		<div style="margin-top:248px;margin-left:60px;margin-right:60px">
+		<div style="margin-top:128px;margin-left:60px;margin-right:60px">
             <div style="margin-top:40px;">
                 <h5 style='text-align:center'> DAFTAR NILAI</h5>
                 <h5 style='text-align:center'> SEKOLAH MENENGAH ATAS</h5>
@@ -109,7 +109,7 @@
                 
                  <h5 style='text-align:center'> TAHUN PELAJARAN {{ date('Y', strtotime('-1 year')) }}/{{date('Y')}}</h5>
               </div>
-         <div style="position:relative;left:120px;width:100%;margin-top:10px;margin-bottom:80px">
+         <div style="position:relative;left:120px;width:100%;margin-top:10px;margin-bottom:40px">
              <div style="margin-top:50px;margin-right:300px;">
                  <p style="text-transform:uppercase">Nama <span style='margin-left:235px'>: {{$siswa->nama}}</span></p>
              </div>
@@ -264,10 +264,20 @@
                 </div>
             </div>
 
+            <div style="margin-left:600px;margin-top:5px">
+                <div style="display:inline-block">
+                    <span style="margin:35px 15px">Kepala Sekolah</span>
+                </div>
+            </div>
 
-            <div style="margin-left:700px;margin-top:75px">
+            <div style="margin-left:600px;margin-top:75px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Alirman, S.Ag</span>
+                </div>
+            </div>
+            <div style="margin-left:600px;margin-top:5px">
+                <div style="display:inline-block">
+                    <span style="margin:35px 15px">NIP.</span>
                 </div>
             </div>
 
