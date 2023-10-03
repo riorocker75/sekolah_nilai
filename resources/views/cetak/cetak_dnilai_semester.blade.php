@@ -96,263 +96,312 @@
 }
 	</style>
 </head>
-<body onload="window.print();">
-    {{-- <body> --}}
-	<div class="wrapper">
-		<div class="container">
+{{-- <body onload="window.print();"> --}}
+    <body>
+	<div class="wrapper" >
+		<div class="container" >
+         
 		<div style="margin-top:248px;margin-left:60px;margin-right:60px">
-        
-        <div style="position:relative;left:310px;width:500px;margin-top:10px;margin-bottom:80px">
+            <div style="margin-left:60px">
+                <img src="{{url('/')}}/logo/kop_surat.png" alt="SMA MHD.SAMAN" style="opacity: .8">
+
+            </div>
+            <div style="margin-top:40px;">
+               <h5 style='text-align:center'> TRANSKIP NILAI</h5>
+               
+                <h5 style='text-align:center'> TAHUN PELAJARAN {{ date('Y', strtotime('-1 year')) }}/{{date('Y')}}</h5>
+             </div>
+        <div style="position:relative;left:120px;width:100%;margin-top:10px;margin-bottom:80px">
             <div style="margin-top:50px;margin-right:300px;">
-                <p style="text-transform:uppercase">{{$siswa->nama}}</p>
+                <p style="text-transform:uppercase">Nama <span style='margin-left:185px'>: {{$siswa->nama}}</span></p>
             </div>
             <div style="">
-                 <p style="text-transform:uppercase">{{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</p>
+                 <p style="text-transform:uppercase">Tempat, Tanggal Lahir <span style='margin-left:50px'>: {{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</span></p>
              </div>
              <div style="">
-                 <p style="text-transform:uppercase">{{$siswa->nis}}</p>
+                 <p style="text-transform:uppercase">NIS / NISN<span style='margin-left:160px'>: {{$siswa->nis}}/{{$siswa->nisn}}</span></p>
              </div>
          
              <div style="">
-                 <p style="text-transform:uppercase">{{$siswa->nisn}}</p>
+                 <p style="text-transform:uppercase">Rata-rata nilai <span style='margin-left:110px'>: {{number_format(($dt1->rata_raport + $dt2->rata_raport+ $dt3->rata_raport + $dt4->rata_raport + $dt5->rata_raport + $dt6->rata_raport) / 6),1}}</span></p>
              </div>
 
         </div>
-
-   
-            <div style="margin-bottom:15px"></div>
-            <div style="margin-left:600px;margin-bottom:7px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 10px">{{$dt1->agama_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt2->agama_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt3->agama_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt4->agama_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt5->agama_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt6->agama_raport}}</span>
-
-                    </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->pkn_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->pkn_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->pkn_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->pkn_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->pkn_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->pkn_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->indo_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->indo_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->indo_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->indo_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->indo_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->indo_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->ing_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->ing_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->ing_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->ing_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->ing_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->ing_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-bottom:15px"></div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->sbk_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->sbk_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->sbk_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->sbk_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->sbk_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->sbk_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->penjas_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->penjas_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->penjas_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->penjas_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->penjas_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->penjas_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->tik_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->tik_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->tik_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->tik_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->tik_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->tik_raport}}</span>
-
-                </div>
-            </div>
-        
-            <div>
-                <div style="margin-top:25px;">
-                    Bahasa Arab
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 10px">{{$dt1->keting_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt2->keting_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt3->keting_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt4->keting_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt5->keting_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt6->keting_raport}}</span>
-
-                    </div>
-                </div>
-            </div>
-
-           <div>
-                <div style="margin-top:25px;">
-                    Al-Quran
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 10px">{{$dt1->mulok1_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt2->mulok1_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt3->mulok1_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt4->mulok1_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt5->mulok1_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt6->mulok1_raport}}</span>
-
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div style="margin-top:5px;">
-                    Tarbiyah Islamiyah
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 10px">{{$dt1->mulok2_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt2->mulok2_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt3->mulok2_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt4->mulok2_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt5->mulok2_raport}}</span>
-                        <span style="margin:15px 10px">{{$dt6->mulok2_raport}}</span>
-
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div style="margin-top:5px;">
-                    -
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 43px">-</span>
-                        <span style="margin:15px 50px">-</span>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-bottom:15px"></div>
-
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->mm_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->mm_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->mm_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->mm_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->mm_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->mm_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->fisika_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->fisika_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->fisika_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->fisika_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->fisika_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->fisika_raport}}</span>
-
-                    
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->kimia_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->kimia_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->kimia_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->kimia_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->kimia_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->kimia_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->biologi_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->biologi_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->biologi_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->biologi_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->biologi_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->biologi_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->sejarah_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->sejarah_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->sejarah_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->sejarah_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->sejarah_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->sejarah_raport}}</span>
-
-                </div>
-            </div>
-
+        <div style="position:relative;left:120px;width:100%;margin-top:10px;margin-bottom:80px">
+            <style>
+             
+                    table {
+                    width: 90%;
+                    }
+            </style>
            
+           <table cellspacing="0" border="0">
+            <colgroup width="64"></colgroup>
+            <colgroup width="305"></colgroup>
+            <colgroup width="52"></colgroup>
+            <colgroup width="49"></colgroup>
+            <colgroup width="51"></colgroup>
+            <colgroup span="2" width="52"></colgroup>
+            <colgroup width="49"></colgroup>
+            <colgroup width="64"></colgroup>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 height="40" align="center" valign=top><font color="#000000">No</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=top><font color="#000000">Mata Pelajaran</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" colspan=6 align="center" valign=bottom><font color="#000000">Nilai Perolehan Semester</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=top><font color="#000000">Rata-rata</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="2" sdnum="1033;"><font color="#000000">2</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="3" sdnum="1033;"><font color="#000000">3</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="4" sdnum="1033;"><font color="#000000">4</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="5" sdnum="1033;"><font color="#000000">5</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="6" sdnum="1033;"><font color="#000000">6</font></td>
+                </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom><b><font color="#000000">Kelompok A</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="31" align="center" valign=top sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Pendidikan Agama dan Budi Pekerti</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->sbk_raport + $dt2->sbk_raport+ $dt3->sbk_raport + $dt4->sbk_raport + $dt5->sbk_raport + $dt6->sbk_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="28" align="center" valign=top sdval="2" sdnum="1033;"><font color="#000000">2</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Pendidikan Pancasila dan Kewarganegaraan</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->pkn_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->pkn_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->pkn_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->pkn_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->pkn_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->pkn_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->pkn_raport + $dt2->pkn_raport+ $dt3->pkn_raport + $dt4->pkn_raport + $dt5->pkn_raport + $dt6->pkn_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="3" sdnum="1033;"><font color="#000000">3</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Bahasa Indonesia</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->indo_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->indo_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->indo_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->indo_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->indo_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->indo_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->indo_raport + $dt2->indo_raport+ $dt3->indo_raport + $dt4->indo_raport + $dt5->indo_raport + $dt6->indo_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="4" sdnum="1033;"><font color="#000000">4</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Matematika</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->mm_raport + $dt2->mm_raport+ $dt3->mm_raport + $dt4->mm_raport + $dt5->mm_raport + $dt6->mm_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="5" sdnum="1033;"><font color="#000000">5</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Sejarah Indonesia</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->sejarah_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->sejarah_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->sejarah_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->sejarah_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->sejarah_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->sejarah_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->sejarah_raport + $dt2->sejarah_raport+ $dt3->sejarah_raport + $dt4->sejarah_raport + $dt5->sejarah_raport + $dt6->sejarah_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="6" sdnum="1033;"><font color="#000000">6</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Bahasa Inggris</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->ing_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->ing_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->ing_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->ing_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->ing_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->ing_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->ing_raport + $dt2->ing_raport+ $dt3->ing_raport + $dt4->ing_raport + $dt5->ing_raport + $dt6->ing_raport) / 6),1}}</font></td>
 
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 10px">{{$dt1->rata_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt2->rata_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt3->rata_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt4->rata_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt5->rata_raport}}</span>
-                    <span style="margin:15px 10px">{{$dt6->rata_raport}}</span>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom><b><font color="#000000">Kelompok B</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Seni Budaya</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->sbk_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->sbk_raport + $dt2->sbk_raport+ $dt3->sbk_raport + $dt4->sbk_raport + $dt5->sbk_raport + $dt6->sbk_raport) / 6),1}}</font></td>
 
-                </div>
-            </div>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="2" sdnum="1033;"><font color="#000000">2</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Pendidikan Jasmani, Olahraga dan Kesehatan</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->penjas_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->penjas_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->penjas_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->penjas_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->penjas_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->penjas_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->penjas_raport + $dt2->penjas_raport+ $dt3->penjas_raport + $dt4->penjas_raport + $dt5->penjas_raport + $dt6->penjas_raport) / 6),1}}</font></td>
 
-            <div style="margin-left:400px;margin-top:45px">
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="3" sdnum="1033;"><font color="#000000">3</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Prakarya dan Kewirausahaan</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->tik_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->tik_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->tik_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->tik_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->tik_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->tik_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->tik_raport + $dt2->tik_raport+ $dt3->tik_raport + $dt4->tik_raport + $dt5->tik_raport + $dt6->tik_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="4" sdnum="1033;"><font color="#000000">4</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Muatan Lokal</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">     a. Al-Quran</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->mulok1_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->mulok1_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->mulok1_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->mulok1_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->mulok1_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->mulok1_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->mulok1_raport + $dt2->mulok1_raport+ $dt3->mulok1_raport + $dt4->mulok1_raport + $dt5->mulok1_raport + $dt6->mulok1_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">     b.Tarbiyah Islamiyah</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->mulok2_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->mulok2_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->mulok2_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->mulok2_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->mulok2_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->mulok2_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->mulok2_raport + $dt2->mulok2_raport+ $dt3->mulok2_raport + $dt4->mulok2_raport + $dt5->mulok2_raport + $dt6->mulok2_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom><b><font color="#000000">Kelompok C</font></b></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Matematika</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->mm_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->mm_raport + $dt2->mm_raport+ $dt3->mm_raport + $dt4->mm_raport + $dt5->mm_raport + $dt6->mm_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="2" sdnum="1033;"><font color="#000000">2</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Biologi</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->biologi_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->biologi_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->biologi_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->biologi_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->biologi_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->biologi_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->biologi_raport + $dt2->biologi_raport+ $dt3->biologi_raport + $dt4->biologi_raport + $dt5->biologi_raport + $dt6->biologi_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="3" sdnum="1033;"><font color="#000000">3</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Fisika</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->fisika_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->fisika_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->fisika_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->fisika_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->fisika_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->fisika_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->fisika_raport + $dt2->fisika_raport+ $dt3->fisika_raport + $dt4->fisika_raport + $dt5->fisika_raport + $dt6->fisika_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="4" sdnum="1033;"><font color="#000000">4</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Kimia</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->kimia_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->kimia_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->kimia_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->kimia_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->kimia_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->kimia_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->kimia_raport + $dt2->kimia_raport+ $dt3->kimia_raport + $dt4->kimia_raport + $dt5->kimia_raport + $dt6->kimia_raport) / 6),1}}</font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="5" sdnum="1033;"><font color="#000000">5</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Mata pelajaran pilihan</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">    a. Geografi</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt1->keting_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt2->keting_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt3->keting_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt4->keting_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt5->keting_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{$dt6->keting_raport}}</font></td>
+                <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br>{{number_format(($dt1->keting_raport + $dt2->keting_raport+ $dt3->keting_raport + $dt4->keting_raport + $dt5->keting_raport + $dt6->keting_raport) / 6),1}}</font></td>
+            </tr>
+        </table>
+           
+            
+
+        </div>
+            <div style="margin-bottom:15px"></div>
+    
+                   
+
+            {{-- <div style="margin-left:400px;margin-top:45px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Kabupaten Deli Serdang,</span>
                     <span style="margin:25px 5px">{{format_tanggal(date('Y-m-d'))}}</span>
@@ -364,7 +413,7 @@
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Alirman, S.Ag</span>
                 </div>
-            </div>
+            </div> --}}
 
             
 		</div>

@@ -96,182 +96,168 @@
 }
 	</style>
 </head>
-<body onload="window.print();">
-    {{-- <body> --}}
+{{-- <body onload="window.print();"> --}}
+    <body>
 	<div class="wrapper">
 		<div class="container">
 		<div style="margin-top:248px;margin-left:60px;margin-right:60px">
-        
-        <div style="position:relative;left:340px;width:500px;margin-top:40px;margin-bottom:80px">
-            <div style="margin-top:50px;margin-right:300px;">
-                <p style="text-transform:uppercase">{{$siswa->nama}}</p>
-            </div>
-            <div style="">
-                 <p style="text-transform:uppercase">{{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</p>
-             </div>
-             <div style="">
-                 <p style="text-transform:uppercase">{{$siswa->nis}}</p>
-             </div>
-         
-             <div style="">
-                 <p style="text-transform:uppercase">{{$siswa->nisn}}</p>
-             </div>
+            <div style="margin-top:40px;">
+                <h5 style='text-align:center'> DAFTAR NILAI</h5>
+                <h5 style='text-align:center'> SEKOLAH MENENGAH ATAS</h5>
+                <h5 style='text-align:center'> PEMINATAN MATEMATIKA DAN ILMU PENGETAHUAN ALAM</h5>
 
+                
+                 <h5 style='text-align:center'> TAHUN PELAJARAN {{ date('Y', strtotime('-1 year')) }}/{{date('Y')}}</h5>
+              </div>
+         <div style="position:relative;left:120px;width:100%;margin-top:10px;margin-bottom:80px">
+             <div style="margin-top:50px;margin-right:300px;">
+                 <p style="text-transform:uppercase">Nama <span style='margin-left:235px'>: {{$siswa->nama}}</span></p>
+             </div>
+             <div style="">
+                  <p style="text-transform:uppercase">Tempat, Tanggal Lahir <span style='margin-left:100px'>: {{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</span></p>
+              </div>
+              <div style="">
+                  <p style="text-transform:uppercase">Nomor Induk Siswa<span style='margin-left:125px'>: {{$siswa->nis}}</span></p>
+              </div>
+              <div style="">
+                <p style="text-transform:uppercase">Nomor Induk Siswa Nasional<span style='margin-left:45px'>: {{$siswa->nisn}}</span></p>
+            </div>
+             
+ 
+         </div>
+       
+
+         <div style="position:relative;left:120px;width:100%;margin-top:10px;margin-bottom:80px">
+            <style>
+             
+                    table {
+                    width: 80%;
+                    }
+            </style>
+            <table cellspacing="0" border="0">
+                <colgroup width="64"></colgroup>
+                <colgroup width="305"></colgroup>
+                <colgroup width="140"></colgroup>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 height="40" align="center" valign=top><font color="#000000">No</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=top><font color="#000000">Mata Pelajaran</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=2 align="center" valign=top><font color="#000000">Nilai</font></td>
+                </tr>
+                <tr>
+                    </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom><b><font color="#000000">Kelompok A</font></b></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000"><br></font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="31" align="center" valign=top sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Pendidikan Agama dan Budi Pekerti</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->pkn_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="28" align="center" valign=top sdval="2" sdnum="1033;"><font color="#000000">2</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Pendidikan Pancasila dan Kewarganegaraan</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->pkn_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="3" sdnum="1033;"><font color="#000000">3</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Bahasa Indonesia</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->indo_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="4" sdnum="1033;"><font color="#000000">4</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Matematika</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->mm_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="5" sdnum="1033;"><font color="#000000">5</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Sejarah Indonesia</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->sejarah_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="6" sdnum="1033;"><font color="#000000">6</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Bahasa Inggris</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->ing_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom><b><font color="#000000">Kelompok B</font></b></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Seni Budaya</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->sbk_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="2" sdnum="1033;"><font color="#000000">2</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Pendidikan Jasmani, Olahraga dan Kesehatan</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->penjas_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="3" sdnum="1033;"><font color="#000000">3</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Prakarya dan Kewirausahaan</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->keting_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="4" sdnum="1033;"><font color="#000000">4</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Muatan Lokal</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">     a. Al-Quran</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->mulok1_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">     b.Tarbiyah Islamiyah</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->mulok2_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="20" align="center" valign=top><font color="#000000"><br></font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom><b><font color="#000000">Kelompok C</font></b></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="1" sdnum="1033;"><font color="#000000">1</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Matematika</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->mm_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="2" sdnum="1033;"><font color="#000000">2</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Biologi</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->biologi_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="3" sdnum="1033;"><font color="#000000">3</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Fisika</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->fisika_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="4" sdnum="1033;"><font color="#000000">4</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Kimia</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->kimia_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="center" valign=top sdval="5" sdnum="1033;"><font color="#000000">5</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">Mata pelajaran pilihan</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000"><br></font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="20" align="left" valign=bottom><font color="#000000"><br></font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom><font color="#000000">    a. Geografi</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle><font color="#000000">{{$dt->tik_us}}</font></td>
+                </tr>
+                <tr>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="20" align="center" valign=bottom><font color="#000000">Rata - rata</font></td>
+                    <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=bottom><font color="#000000">{{$dt->rata_us}}</font></td>
+                </tr>
+            </table>
         </div>
-
-   
-            <div style="margin-bottom:15px"></div>
-            <div style="margin-left:600px;margin-bottom:7px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 40px">{{$dt->agama_raport}}</span>
-                        <span style="margin:15px 40px">{{$dt->agama_us}}</span>
-                    </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->pkn_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->pkn_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->indo_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->indo_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->ing_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->ing_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-bottom:15px"></div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->sbk_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->sbk_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->penjas_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->penjas_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->tik_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->tik_us}}</span>
-                </div>
-            </div>
-        
-            <div>
-                <div style="margin-top:25px;">
-                    Bahasa Arab
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 40px">{{$dt->keting_raport}}</span>
-                        <span style="margin:15px 40px">{{$dt->keting_us}}</span>
-                    </div>
-                </div>
-            </div>
-
-           <div>
-                <div style="margin-top:25px;">
-                    Al-Quran
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 40px">{{$dt->mulok1_raport}}</span>
-                        <span style="margin:15px 40px">{{$dt->mulok1_us}}</span>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div style="margin-top:5px;">
-                    Tarbiyah Islamiyah
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 40px">{{$dt->mulok2_raport}}</span>
-                        <span style="margin:15px 40px">{{$dt->mulok2_us}}</span>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div style="margin-top:5px;">
-                    -
-                </div>
-
-                <div style="margin-left:600px;margin-top:-27px">
-                    <div style="display:inline-block">
-                        <span style="margin:15px 43px">-</span>
-                        <span style="margin:15px 50px">-</span>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-bottom:15px"></div>
-
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->mm_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->mm_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->fisika_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->fisika_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->kimia_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->kimia_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->biologi_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->biologi_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->sejarah_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->sejarah_us}}</span>
-                </div>
-            </div>
-
-           
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 40px">{{$dt->rata_raport}}</span>
-                    <span style="margin:15px 40px">{{$dt->rata_us}}</span>
-                </div>
-            </div>
-
-            <div style="margin-left:400px;margin-top:45px">
+        {{-- end table div --}}
+            <div style="margin-left:600px;margin-top:45px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Kabupaten Deli Serdang,</span>
                     <span style="margin:25px 5px">{{format_tanggal(date('Y-m-d'))}}</span>
@@ -279,7 +265,7 @@
             </div>
 
 
-            <div style="margin-left:500px;margin-top:75px">
+            <div style="margin-left:700px;margin-top:75px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Alirman, S.Ag</span>
                 </div>
