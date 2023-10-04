@@ -178,7 +178,7 @@
            
 
            <div>
-                <div style="margin-top:25px;margin-left:70px">
+                <div style="margin-top:50px;margin-left:170px">
                     Al-Quran
                 </div>
 
@@ -190,11 +190,11 @@
             </div>
 
             <div>
-                <div style="margin-top:5px;margin-left:70px">
+                <div style="margin-top:5px;margin-left:170px">
                     Tarbiyah Islamiyah
                 </div>
 
-                <div style="margin-left:600px;margin-top:-27px">
+                <div style="margin-left:600px;margin-top:-5px">
                     <div style="display:inline-block">
                         <span style="margin:15px 80px">{{$dt->mulok1_us}}</span>
                     </div>
@@ -206,7 +206,7 @@
                     -
                 </div>
 
-                <div style="margin-left:600px;margin-top:-27px">
+                <div style="margin-left:600px;margin-top:-5px">
                     <div style="display:inline-block">
                         <span style="margin:15px 43px">-</span>
                         <span style="margin:15px 50px">-</span>
@@ -247,10 +247,11 @@
             <div style="margin-bottom:15px"></div>
             <div style="margin-bottom:15px"></div>
             <div style="margin-bottom:15px"></div>
+            <div style="margin-bottom:15px"></div>
 
 
             <div>
-                <div style="margin-top:25px;margin-left:70px">
+                <div style="margin-top:25px;margin-left:170px">
                    Geografi
                 </div>
 
@@ -261,7 +262,12 @@
                 </div>
             </div>
 
-           
+            <div style="margin-bottom:15px"></div>
+            <div style="margin-bottom:15px"></div>
+            <div style="margin-bottom:15px"></div>
+            <div style="margin-bottom:15px"></div>
+            <div style="margin-bottom:15px"></div>
+
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
@@ -269,7 +275,7 @@
                 </div>
             </div>
 
-            <div style="margin-left:500px;margin-top:145px">
+            <div style="margin-left:500px;margin-top:115px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">Kabupaten Deli Serdang,</span>
                     <span style="margin:25px 5px">{{format_tanggal(date('Y-m-d'))}}</span>
