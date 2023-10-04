@@ -256,7 +256,7 @@
 
                 <div style="margin-left:600px;margin-top:-27px">
                     <div style="display:inline-block">
-                        <span style="margin:15px 80px">{{$dt-tik_us}}</span>
+                        <span style="margin:15px 80px">{{$dt->tik_us}}</span>
                     </div>
                 </div>
             </div>
