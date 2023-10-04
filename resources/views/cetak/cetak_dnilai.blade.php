@@ -283,11 +283,11 @@
             </div>
 
 
-            <div style="margin-left:550px;margin-top:175px">
+            {{-- <div style="margin-left:550px;margin-top:175px">
                 <div style="display:inline-block">
                     <span style="margin:35px 15px">ADDIEN FAHMI, S.Ag</span>
                 </div>
-            </div>
+            </div> --}}
 
             
 		</div>
