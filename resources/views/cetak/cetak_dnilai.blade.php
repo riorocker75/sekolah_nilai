@@ -248,6 +248,7 @@
             <div style="margin-bottom:15px"></div>
             <div style="margin-bottom:15px"></div>
             <div style="margin-bottom:15px"></div>
+            <div style="margin-bottom:15px"></div>
 
 
             <div>
@@ -255,7 +256,7 @@
                    Geografi
                 </div>
 
-                <div style="margin-left:600px;margin-top:-27px">
+                <div style="margin-left:600px;margin-top:-10px">
                     <div style="display:inline-block">
                         <span style="margin:15px 150px">{{$dt->tik_us}}</span>
                     </div>
