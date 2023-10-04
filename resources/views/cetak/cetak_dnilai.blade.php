@@ -123,37 +123,37 @@
             <div style="margin-bottom:15px"></div>
             <div style="margin-left:600px;margin-bottom:7px">
                     <div style="display:inline-block">
-                        <span style="margin:15px 80px">{{$dt->agama_us}}</span>
+                        <span style="margin:15px 130px">{{$dt->agama_us}}</span>
                     </div>
             </div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->pkn_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->pkn_us}}</span>
                 </div>
             </div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->indo_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->indo_us}}</span>
                 </div>
             </div>
             
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->mm_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->mm_us}}</span>
                 </div>
             </div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->sejarah_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->sejarah_us}}</span>
                 </div>
             </div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->ing_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->ing_us}}</span>
                 </div>
             </div>
 
@@ -161,13 +161,13 @@
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->sbk_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->sbk_us}}</span>
                 </div>
             </div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->penjas_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->penjas_us}}</span>
                 </div>
             </div>
             <div style="margin-bottom:15px"></div>
@@ -184,7 +184,7 @@
 
                 <div style="margin-left:600px;margin-top:-27px">
                     <div style="display:inline-block">
-                        <span style="margin:15px 80px">{{$dt->mulok1_us}}</span>
+                        <span style="margin:15px 130px">{{$dt->mulok1_us}}</span>
                     </div>
                 </div>
             </div>
@@ -196,7 +196,7 @@
 
                 <div style="margin-left:600px;margin-top:-5px">
                     <div style="display:inline-block">
-                        <span style="margin:15px 80px">{{$dt->mulok1_us}}</span>
+                        <span style="margin:15px 130px">{{$dt->mulok1_us}}</span>
                     </div>
                 </div>
             </div>
@@ -219,27 +219,27 @@
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->mm_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->mm_us}}</span>
                 </div>
             </div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->biologi_raport}}</span>
-
-                </div>
-            </div>
-
-            <div style="margin-left:600px;margin-bottom:7px">
-                <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->fisika_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->biologi_raport}}</span>
 
                 </div>
             </div>
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->kimia_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->fisika_us}}</span>
+
+                </div>
+            </div>
+
+            <div style="margin-left:600px;margin-bottom:7px">
+                <div style="display:inline-block">
+                    <span style="margin:15px 130px">{{$dt->kimia_us}}</span>
 
                 </div>
             </div>
@@ -257,7 +257,7 @@
 
                 <div style="margin-left:600px;margin-top:-27px">
                     <div style="display:inline-block">
-                        <span style="margin:15px 80px">{{$dt->tik_us}}</span>
+                        <span style="margin:15px 130px">{{$dt->tik_us}}</span>
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@
 
             <div style="margin-left:600px;margin-bottom:7px">
                 <div style="display:inline-block">
-                    <span style="margin:15px 80px">{{$dt->rata_us}}</span>
+                    <span style="margin:15px 130px">{{$dt->rata_us}}</span>
                 </div>
             </div>
 
