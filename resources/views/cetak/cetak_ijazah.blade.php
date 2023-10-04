@@ -121,17 +121,17 @@
               </div>
         <div style="position:relative;left:140px;width:100%;margin-top:40px;margin-bottom:80px">
             <div style="margin-top:50px;margin-right:300px;">
-                <p style=""><span style="color:transparent">Yand bertanda tangan dibawah ini, Kepala</span> Sekolah Menengah Atas Swasta</p>
+                <p style=""><span style="color:transparent"></span> Sekolah Menengah Atas Swasta</p>
                 <p style="">Ma'had Muhammad Saman Sunggal</p>
-                <p style=""><span style="color:transparent">Nomor Pokok Sekolah Nasional :</span> 10262125</p>
+                <p style=""><span style="color:transparent">Nomor Pokok Sekolah Nasional </span> 10262125</p>
                 <p style=""><span style="color:transparent">Kabupaten / Kota</span> Deli Serdang</p>
                 <p style=""><span style="color:transparent">Provinsi Sumatera Utara</span></p>
                 {{-- <p style=""><span style="color:transparent">menerangkan bahwa</span> </p> --}}
-                <p style=""><span style="color:transparent">Nama</span> <span style='margin-left:190px'>: {{$siswa->nama}}</span></p>
-                <p style=""><span style="color:transparent">Tempat, tanggal lahir</span> <span style='margin-left:85px'>: {{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</span></p>
-                <p style=""><span style="color:transparent">Nama orang tua / wali</span> <span style='margin-left:75px'>: {{$siswa->ortu}}</span></p>
-                <p style=""><span style="color:transparent">Nomor induk siswa</span> <span style='margin-left:98px'>: {{$siswa->nis}}</span></p>
-                <p style=""><span style="color:transparent">Nomor induk siswa nasional</span> <span style='margin-left:36px'>: {{$siswa->nisn}}</span></p>
+                <p style=""><span style="color:transparent">Nama</span> <span style='margin-left:190px'> {{$siswa->nama}}</span></p>
+                <p style=""><span style="color:transparent">Tempat, tanggal lahir</span> <span style='margin-left:85px'> {{$siswa->tmp_lhr}}, {{format_tanggal(date('Y-m-d',strtotime($siswa->tgl_lhr)))}}</span></p>
+                <p style=""><span style="color:transparent">Nama orang tua / wali</span> <span style='margin-left:75px'> {{$siswa->ortu}}</span></p>
+                <p style=""><span style="color:transparent">Nomor induk siswa</span> <span style='margin-left:98px'> {{$siswa->nis}}</span></p>
+                <p style=""><span style="color:transparent">Nomor induk siswa nasional</span> <span style='margin-left:36px'> {{$siswa->nisn}}</span></p>
 
                 <br>
                 <br>
