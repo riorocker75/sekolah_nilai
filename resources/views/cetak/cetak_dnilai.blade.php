@@ -97,10 +97,10 @@
 	</style>
 </head>
 {{-- <body onload="window.print();"> --}}
-    <body>
+    <body style="font-size: 35px">
 	<div class="wrapper">
 		<div class="container">
-		<div style="margin-top:448px;margin-left:60px;margin-right:160px;font-size:20px">
+		<div style="margin-top:1248px;margin-left:60px;margin-right:160px;font-size:30px">
         
         <div style="position:relative;left:340px;width:500px;margin-top:40px;margin-bottom:80px;">
             <div style="margin-top:50px;margin-right:300px;">
@@ -121,28 +121,28 @@
 
    
             <div style="margin-bottom:15px"></div>
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                     <div style="display:inline-block">
                         
                         <span style="margin:15px 130px">{{$dt->agama_us}}</span>
                     </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                    
                     <span style="margin:15px 130px">{{$dt->pkn_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                   
                     <span style="margin:15px 130px">{{$dt->indo_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
         
                     <span style="margin:15px 130px">{{$dt->mm_us}}</span>
@@ -151,35 +151,35 @@
 
             <div style="margin-bottom:15px"></div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                    
                     <span style="margin:15px 0 0 130px">{{$dt->sejarah_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                  
                     <span style="margin:15px 130px">{{$dt->ing_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                   
                     <span style="margin:15px 130px">{{$dt->sbk_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                   
                     <span style="margin:15px 130px">{{$dt->penjas_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                   
                     <span style="margin:15px 130px">{{$dt->tik_us}}</span>
@@ -194,7 +194,7 @@
                     Al-Quran
                 </div>
 
-                <div style="margin-left:1000px;margin-top:-27px">
+                <div style="margin-left:2000px;margin-top:-27px">
                     <div style="display:inline-block">
                        
                         <span style="margin:15px 130px">{{$dt->mulok1_us}}</span>
@@ -207,7 +207,7 @@
                     Tarbiyah Islamiyah
                 </div>
 
-                <div style="margin-left:1000px;margin-top:-27px">
+                <div style="margin-left:2000px;margin-top:-27px">
                     <div style="display:inline-block">
                         
                         <span style="margin:15px 130px">{{$dt->mulok1_us}}</span>
@@ -222,7 +222,7 @@
                     Bahasa Arab
                 </div>
 
-                <div style="margin-left:1000px;margin-top:-27px">
+                <div style="margin-left:2000px;margin-top:-27px">
                     <div style="display:inline-block">
                      
                         <span style="margin:15px 130px">{{$dt->keting_us}}</span>
@@ -235,7 +235,7 @@
                    
                 </div>
 
-                <div style="margin-left:1000px;margin-top:-27px">
+                <div style="margin-left:2000px;margin-top:-27px">
                     <div style="display:inline-block">
                         <span style="margin:15px 43px"></span>
                         <span style="margin:15px 50px"></span>
@@ -246,28 +246,28 @@
             <div style="margin-bottom:15px"></div>
 
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                
                     <span style="margin:15px 130px">{{$dt->mm_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
           
                     <span style="margin:15px 130px">{{$dt->biologi_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                     
                     <span style="margin:15px 130px">{{$dt->fisika_us}}</span>
                 </div>
             </div>
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                     
                     <span style="margin:15px 130px">{{$dt->kimia_us}}</span>
@@ -282,7 +282,7 @@
                 <div style="margin-top:15px;margin-left:60px">
                     Geografi
                 </div>
-                    <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+                    <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                         <div style="display:inline-block">
                         
                             <span style="margin:15px 130px">{{$dt->mulok1_us}}</span>
@@ -291,7 +291,7 @@
              </div>
             <
 
-            <div style="margin-left:1000px;margin-bottom:7px;font-size:20px">
+            <div style="margin-left:2000px;margin-bottom:7px;font-size:20px">
                 <div style="display:inline-block">
                 
                     <span style="margin:15px 130px">{{$dt->rata_us}}</span>
